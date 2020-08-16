@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             nomiPersonaggi.add("Pokemon Trainer");
             nomiPersonaggi.add("Richter");
             nomiPersonaggi.add("Ridley");
-            nomiPersonaggi.add("R.O.B");
+            nomiPersonaggi.add("R.O.B.");
             nomiPersonaggi.add("Robin");
             nomiPersonaggi.add("Rosalina&Luma");
             nomiPersonaggi.add("Roy");
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
             itemList.add(new CardView(R.drawable.pokemon_trainer, "Pokemon Trainer"));
             itemList.add(new CardView(R.drawable.richter, "Richter"));
             itemList.add(new CardView(R.drawable.ridley, "Ridley"));
-            itemList.add(new CardView(R.drawable.rob, "R.O.B"));
+            itemList.add(new CardView(R.drawable.rob, "R.O.B."));
             itemList.add(new CardView(R.drawable.robin, "Robin"));
             itemList.add(new CardView(R.drawable.rosalina_and_luma, "Rosalina&Luma"));
             itemList.add(new CardView(R.drawable.roy, "Roy"));
