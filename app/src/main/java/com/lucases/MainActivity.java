@@ -1,24 +1,16 @@
 package com.lucases;
 
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
+import android.widget.SearchView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.os.Environment;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethod;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.SearchView;
-import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -80,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
             idPersonaggi.add(R.drawable.mega_man);
             idPersonaggi.add(R.drawable.meta_knight);
             idPersonaggi.add(R.drawable.mewtwo);
+            idPersonaggi.add(R.drawable.mii_brawler);
+            idPersonaggi.add(R.drawable.mii_gunner);
             idPersonaggi.add(R.drawable.mii_fighter);
             idPersonaggi.add(R.drawable.minmin);
             idPersonaggi.add(R.drawable.mr_game_and_watch);
@@ -161,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
             nomiPersonaggi.add("Mega Man");
             nomiPersonaggi.add("Meta Knight");
             nomiPersonaggi.add("Mewtwo");
+            nomiPersonaggi.add("Mii Brawler");
+            nomiPersonaggi.add("Mii Gunner");
             nomiPersonaggi.add("Mii Fighter");
             nomiPersonaggi.add("Minmin");
             nomiPersonaggi.add("Mr Game&Watch");
@@ -245,7 +241,9 @@ public class MainActivity extends AppCompatActivity {
             itemList.add(new CardView(R.drawable.mega_man, "Mega Man"));
             itemList.add(new CardView(R.drawable.meta_knight, "Meta Knight"));
             itemList.add(new CardView(R.drawable.mewtwo, "Mewtwo"));
-            itemList.add(new CardView(R.drawable.mii_fighter, "Miis"));
+            itemList.add(new CardView(R.drawable.mii_brawler, "Mii Brawler"));
+            itemList.add(new CardView(R.drawable.mii_gunner, "Mii Gunner"));
+            itemList.add(new CardView(R.drawable.mii_swordfighter, "Mii Swordfighter"));
             itemList.add(new CardView(R.drawable.minmin, "Minmin"));
             itemList.add(new CardView(R.drawable.mr_game_and_watch, "Mr Game&Watch"));
             itemList.add(new CardView(R.drawable.ness, "Ness"));
