@@ -3,23 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="4dp"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="#2B2B2B"
+    app:cardCornerRadius="15dp"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@android:color/transparent">
+    app:layout_constraintCircleAngle="@android:integer/config_shortAnimTime"><!--make it transparent to see the card-->
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="1dp"
-        android:background="@android:color/transparent">
+        android:layout_margin="4dp"
+        android:background="#2B2B2B">
 
         <ImageView
             android:id="@+id/ImageView"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:padding="2dp"
-            android:background="@android:color/transparent"
-            tools:ignore="ContentDescription">
-        </ImageView>
+            android:background="#2B2B2B"
+            tools:ignore="ContentDescription"></ImageView>
 
         <TextView
             android:id="@+id/TextView"

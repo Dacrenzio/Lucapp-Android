@@ -19,7 +19,7 @@ import com.lucases.R;
  */
 public class PlaceholderFragment extends Fragment {
 
-    private static final String ARG_SECTION_NUMBER = "section_number";
+    public static final String ARG_SECTION_NUMBER = "section_number";
 
     private PageViewModel pageViewModel;
 

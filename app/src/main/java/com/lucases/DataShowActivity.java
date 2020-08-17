@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 import com.lucases.ui.main.SectionsPagerAdapter;
 
 public class DataShowActivity extends AppCompatActivity {
@@ -21,11 +22,14 @@ public class DataShowActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_show);
         // TextView playerString = findViewById(R.id.textPlayer);
         //playerString.setText(intent.getStringExtra(CardView.NomePG));
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.view_pager);
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this);
+        ViewPager2 viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
+        new TabLayoutMediator(tabs, viewPager,
+                (tab, position) -> tab.setText("OBJECT " + (position + 1))
+        ).attach();
+        //tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
         if (intent.getStringExtra(CardView.NomePG).equals("Pokemon Trainer")) {
             findViewById(R.id.fab).setVisibility(View.VISIBLE);
