@@ -27,7 +27,10 @@ public class DataShowActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
-
+        if (intent.getStringExtra(CardView.NomePG).equals("Pokemon Trainer")) {
+            findViewById(R.id.fab).setVisibility(View.VISIBLE);
+            findViewById(R.id.fab).setClickable(true);
+        }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
