@@ -1,17 +1,20 @@
 package com.lucases.ui.main;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.lucases.DataShowActivity;
 import com.lucases.R;
 
 /**
@@ -36,17 +39,104 @@ public class FragmentMiscInfo extends Fragment {
     }
 
     @Override
-    public View onCreateView(
-            @NonNull LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_misc_info, container, false);
-        final TextView textView = root.findViewById(R.id.section_label);
-        pageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        placeData(root);
         return root;
+    }
+
+    private void placeData(View root) {
+        //adding Up-Air OOS row
+        TableRow row = root.findViewById(R.id.uAirOOSRow);
+        TextView text = getTextView(row, 1f);
+        text.setText(DataShowActivity.charData[1]);
+        switch (DataShowActivity.charData[1]) {
+            case "Yes":
+                text.setBackgroundColor(Color.parseColor("#6CF324"));
+                break;
+            case "No":
+                text.setBackgroundColor(Color.parseColor("#EC1932"));
+                break;
+            default:
+                text.setBackgroundColor(Color.parseColor("#DAB851"));
+        }
+        System.out.println(text);
+        row.addView(text);
+
+        //adding DashAttck at ledge row
+        row = root.findViewById(R.id.zairUAirRow);
+        text = getTextView(row, 1f);
+        text.setText(DataShowActivity.charData[2]);
+        switch (DataShowActivity.charData[2]) {
+            case "Yes":
+                text.setBackgroundColor(Color.parseColor("#6CF324"));
+                break;
+            case "No":
+                text.setBackgroundColor(Color.parseColor("#EC1932"));
+                break;
+            default:
+                text.setBackgroundColor(Color.parseColor("#DAB851"));
+        }
+        row.addView(text);
+
+        //adding DashAttack on Ledge
+        TableLayout table = root.findViewById(R.id.dashAttack);
+        TableRow newRow = getTableRow(table, "#E1C2FB");
+        text = getTextView(newRow, 1f);
+        text.setText(DataShowActivity.charData[3]);
+        switch (DataShowActivity.charData[3]) {
+            case "Yes":
+                text.setBackgroundColor(Color.parseColor("#6CF324"));
+                break;
+            case "No":
+                text.setBackgroundColor(Color.parseColor("#EC1932"));
+                break;
+            default:
+                text.setBackgroundColor(Color.parseColor("#DAB851"));
+        }
+        newRow.addView(text);
+        text = getTextView(newRow, 3f);
+        text.setText(DataShowActivity.charData[4]);
+        newRow.addView(text);
+        table.addView(newRow);
+
+        //aggiungo le mosse assorbibili
+        table = root.findViewById(R.id.absorbMoves);
+        if (DataShowActivity.charData[5].equals(""))
+            table.setVisibility(View.GONE);
+        else {
+            for (int i = 5; i < 26; i++) {
+                if (((i + 1) / 2) % 2 == 0)
+                    newRow = getTableRow(table, "#E1C2FB");
+                else
+                    newRow = getTableRow(table, "#FBF7CD");
+                text = getTextView(newRow, 1f);
+                text.setText(DataShowActivity.charData[i++]);
+                newRow.addView(text);
+                text = getTextView(newRow, 1f);
+                text.setText(DataShowActivity.charData[i]);
+                newRow.addView(text);
+                table.addView(newRow);
+                if (DataShowActivity.charData[i + 1].equals(""))
+                    break;
+            }
+        }
+    }
+
+    private TableRow getTableRow(TableLayout table, String color) {
+        TableRow newRow = new TableRow(table.getContext());
+        newRow.setPadding(10, 10, 10, 10);
+        newRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+        newRow.setBackgroundColor(Color.parseColor(color));
+        return newRow;
+    }
+
+    private TextView getTextView(TableRow row, float w) {
+        TextView text = new TextView(row.getContext());
+        text.setTypeface(Typeface.DEFAULT_BOLD);
+        text.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, w));
+        text.setPadding(3, 3, 3, 3);
+        text.setGravity(Gravity.CENTER);
+        return text;
     }
 }

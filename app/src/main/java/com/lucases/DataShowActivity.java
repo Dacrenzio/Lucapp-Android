@@ -18,11 +18,15 @@ import java.util.Scanner;
 
 public class DataShowActivity extends AppCompatActivity {
     public static final String charTrio = "com.lucases.MESSAGE";
+    public static String[] charData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         Intent intent = getIntent();
+        String messageCardView = intent.getStringExtra(CardView.NomePG);
+        charData = fetchDatas(messageCardView);
+
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_show);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this);
         ViewPager2 viewPager = findViewById(R.id.view_pager);
@@ -43,13 +47,10 @@ public class DataShowActivity extends AppCompatActivity {
                     }
                 }).attach();
 
-        String messageCardView = intent.getStringExtra(CardView.NomePG);
 
         if (messageCardView.equals("Pokemon Trainer") || messageCardView.equals("Squirtle") || messageCardView.equals("Ivysaur") || messageCardView.equals("Charizard")) {
             fabManager(intent);
         }
-
-        String[] charData = fetchDatas(messageCardView);
     }
 
     private void fabManager(Intent intent) {

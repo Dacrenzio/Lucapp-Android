@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RelativeLayoutFragment"
     android:layout_width="match_parent"
@@ -8,19 +7,108 @@
     android:background="#2B2B2B"
     tools:context=".ui.main.FragmentMiscInfo">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/uAirOOS"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RelativeLayoutFragment"
-        tools:ignore="NotSibling"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/background_light"
+        android:padding="1dp">
+
+        <TableRow
+            android:id="@+id/uAirOOSRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#00A89B">
+
+            <TextView
+                android:text="Up-Air Out Of Shield"
+                android:gravity="left"
+                android:layout_weight="3"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/dashAttack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uAirOOS"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/background_light"
+        android:padding="1dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#00A89B">
+
+            <TextView
+                android:text="DashAttack at ledge"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/zairUAir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dashAttack"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/background_light"
+        android:padding="1dp">
+
+        <TableRow
+            android:id="@+id/zairUAirRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#00A89B">
+
+            <TextView
+                android:text="Zair to Up-Air"
+                android:gravity="left"
+                android:layout_weight="3"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/absorbMoves"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zairUAir"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/background_light"
+        android:padding="1dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#00A89B">
+
+            <TextView
+                android:text="Heal Percentages"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+    </TableLayout>
+
 
 </RelativeLayout>
