@@ -15,7 +15,8 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary" />
+            android:background="?attr/colorPrimary"
+            app:tabMode="fixed" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
@@ -24,16 +25,102 @@
         android:layout_height="match_parent"
         android:background="@android:color/background_dark"
         android:orientation="horizontal"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.viewpager2.widget.ViewPager2>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:visibility="invisible"
-        android:clickable="false"
+    <TableLayout
+        android:id="@+id/tableFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/pokeball"
-        android:backgroundTint="@android:color/background_light" />
+        android:orientation="vertical">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/charTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Charizard"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textColor="@android:color/background_light" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabChar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:backgroundTint="@android:color/holo_red_light" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/ivyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ivysaur"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                android:textColor="@android:color/background_light" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabIvy"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:backgroundTint="@android:color/holo_green_light" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/squirlteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Squirtle"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginBottom="3dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/background_light" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSquirtle"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="7dp" />
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_gravity="right"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pokeball"
+                android:backgroundTint="@android:color/background_light" />
+        </TableRow>
+    </TableLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
