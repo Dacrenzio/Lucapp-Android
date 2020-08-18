@@ -24,8 +24,6 @@ public class DataShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         setContentView(R.layout.activity_data_show);
-        // TextView playerString = findViewById(R.id.textPlayer);
-        //playerString.setText(intent.getStringExtra(CardView.NomePG));
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this);
         ViewPager2 viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -33,12 +31,15 @@ public class DataShowActivity extends AppCompatActivity {
         new TabLayoutMediator(tabs, viewPager,
                 (tab, position) -> tab.setText("OBJECT " + (position + 1))
         ).attach();
-        FloatingActionButton fab = findViewById(R.id.fab);
+
         String[] charDatas = fetchDatas(intent.getStringExtra(CardView.NomePG));
-        if (charDatas[1].equals("Squirtle")) {
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        if (charDatas[1].equals("Squirtle") || charDatas[1].equals("Ivysaur") || charDatas[1].equals("Charizard")) {
             findViewById(R.id.fab).setVisibility(View.VISIBLE);
             findViewById(R.id.fab).setClickable(true);
         }
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +51,7 @@ public class DataShowActivity extends AppCompatActivity {
 
     }
 
-    public String[] fetchDatas(String charName) {
+    private String[] fetchDatas(String charName) {
         InputStream input = getResources().openRawResource(R.raw.datas);
         Scanner scanner = new Scanner(input);
         scanner.nextLine();

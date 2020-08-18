@@ -282,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
         }// metodo statico
         adapter = new MyAdapter(itemList);
         buildRecyclerView();
+
         adapter.setOnItemClickListener((new MyAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
