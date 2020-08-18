@@ -20,10 +20,21 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         // Return a NEW fragment instance in createFragment(int)
-        Fragment fragment = new PlaceholderFragment();
         Bundle args = new Bundle();
-        // Our object is just an integer :-P
-        args.putInt(PlaceholderFragment.ARG_SECTION_NUMBER, position + 1);
+        Fragment fragment;
+        switch (position) {
+            case 0:
+                fragment = new FragmentMiscInfo();
+                args.putInt(FragmentMiscInfo.ARG_SECTION_NUMBER, position + 1);
+                break;
+            case 1:
+                fragment = new FragmentTechChase();
+                args.putInt(FragmentTechChase.ARG_SECTION_NUMBER, position + 1);
+                break;
+            default:
+                fragment = new FragmentKillConfirm();
+                args.putInt(FragmentKillConfirm.ARG_SECTION_NUMBER, position + 1);
+        }
         fragment.setArguments(args);
         return fragment;
     }

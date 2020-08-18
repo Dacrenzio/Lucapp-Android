@@ -57,6 +57,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="7dp"
                 android:layout_marginTop="7dp"
+                app:srcCompat="@drawable/pokeball"
                 android:backgroundTint="@android:color/holo_red_light" />
         </TableRow>
 
@@ -81,6 +82,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="7dp"
                 android:layout_marginTop="7dp"
+                app:srcCompat="@drawable/pokeball"
                 android:backgroundTint="@android:color/holo_green_light" />
         </TableRow>
 
@@ -105,6 +107,7 @@
                 android:clickable="false"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/pokeball"
                 android:layout_marginTop="7dp" />
         </TableRow>
 
