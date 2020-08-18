@@ -8,51 +8,6 @@
     android:background="#2B2B2B"
     tools:context=".ui.main.PlaceholderFragment">
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/background_light">
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp">
-
-            <TextView
-                android:layout_marginRight="1dp"
-                android:background="@android:color/background_dark"
-                android:text="prova"
-                android:textColor="@android:color/background_light" />
-
-            <TextView
-                android:background="@android:color/background_dark"
-                android:text="prova"
-                android:textColor="@android:color/background_light" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginBottom="1dp">
-
-            <TextView
-                android:layout_marginRight="1dp"
-                android:background="@android:color/background_dark"
-                android:text="prova"
-                android:textColor="@android:color/background_light" />
-
-            <TextView
-                android:background="@android:color/background_dark"
-                android:text="prova"
-                android:textColor="@android:color/background_light" />
-
-        </TableRow>
-    </TableLayout>
-
     <TextView
         android:id="@+id/section_label"
         android:layout_width="wrap_content"

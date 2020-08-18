@@ -13,6 +13,10 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.lucases.ui.main.SectionsPagerAdapter;
 
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class DataShowActivity extends AppCompatActivity {
 
     @Override
@@ -29,9 +33,9 @@ public class DataShowActivity extends AppCompatActivity {
         new TabLayoutMediator(tabs, viewPager,
                 (tab, position) -> tab.setText("OBJECT " + (position + 1))
         ).attach();
-        //tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
-        if (intent.getStringExtra(CardView.NomePG).equals("Pokemon Trainer")) {
+        String[] charDatas = fetchDatas(intent.getStringExtra(CardView.NomePG));
+        if (charDatas[1].equals("Squirtle")) {
             findViewById(R.id.fab).setVisibility(View.VISIBLE);
             findViewById(R.id.fab).setClickable(true);
         }
@@ -42,5 +46,34 @@ public class DataShowActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+    }
+
+    public String[] fetchDatas(String charName) {
+        InputStream input = getResources().openRawResource(R.raw.datas);
+        Scanner scanner = new Scanner(input);
+        scanner.nextLine();
+        scanner.nextLine();
+        ArrayList<String> righe = new ArrayList<>();
+        while (scanner.hasNextLine()) {
+            righe.add(scanner.nextLine());
+        }
+        int l = 0, r = righe.size() - 1;
+        if (charName.equals("Pokemon Trainer")) {
+            return righe.get(73).split(";");
+        } else {
+            while (l <= r) {
+                int m = (l + r) / 2;
+                int res = charName.toLowerCase().compareTo(righe.get(m).substring(0, righe.get(m).indexOf(';')).toLowerCase());
+                if (res == 0)
+                    return righe.get(m).split(";");
+                if (res > 0)
+                    l = m + 1;
+                else
+                    r = m - 1;
+            }
+        }
+        return new String[]{"not found"};
     }
 }

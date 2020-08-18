@@ -253,8 +253,8 @@ public class MainActivity extends AppCompatActivity {
             itemList.add(new CardView(R.drawable.peach, "Peach"));
             itemList.add(new CardView(R.drawable.pichu, "Pichu"));
             itemList.add(new CardView(R.drawable.pikachu, "Pikachu"));
-            itemList.add(new CardView(R.drawable.pit, "Pit"));
             itemList.add(new CardView(R.drawable.piranha_plant, "Piranha Plant"));
+            itemList.add(new CardView(R.drawable.pit, "Pit"));
             itemList.add(new CardView(R.drawable.pokemon_trainer, "Pokemon Trainer"));
             itemList.add(new CardView(R.drawable.richter, "Richter"));
             itemList.add(new CardView(R.drawable.ridley, "Ridley"));
