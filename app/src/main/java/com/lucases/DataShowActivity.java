@@ -3,7 +3,6 @@ package com.lucases;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -18,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DataShowActivity extends AppCompatActivity {
+    public static final String charTrio = "com.lucases.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +43,16 @@ public class DataShowActivity extends AppCompatActivity {
                     }
                 }).attach();
 
-        if (intent.getStringExtra(CardView.NomePG).equals("Pokemon Trainer")) {
-            fabManager(intent.getStringExtra(CardView.NomePG));
-        } else {
-            String[] charDatas = fetchDatas(intent.getStringExtra(CardView.NomePG));
+        String messageCardView = intent.getStringExtra(CardView.NomePG);
+
+        if (messageCardView.equals("Pokemon Trainer") || messageCardView.equals("Squirtle") || messageCardView.equals("Ivysaur") || messageCardView.equals("Charizard")) {
+            fabManager(intent);
         }
 
+        String[] charData = fetchDatas(messageCardView);
     }
 
-    private void fabManager(String ch) {
+    private void fabManager(Intent intent) {
         FloatingActionButton fab = findViewById(R.id.fab);
         findViewById(R.id.tableFAB).setVisibility(View.VISIBLE);
         fab.setVisibility(View.VISIBLE);
@@ -73,7 +74,6 @@ public class DataShowActivity extends AppCompatActivity {
                     fabC.show();
                     fabC.setClickable(true);
                     findViewById(R.id.charTextView).setVisibility(View.VISIBLE);
-                    Toast.makeText(getApplicationContext(), "hai cliccato sull'icona", Toast.LENGTH_LONG).show();
                 } else {
                     fabS.hide();
                     fabS.setClickable(false);
@@ -92,36 +92,16 @@ public class DataShowActivity extends AppCompatActivity {
         fabS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fabS.hide();
-                fabS.setClickable(false);
-                findViewById(R.id.squirlteTextView).setVisibility(View.INVISIBLE);
-                fabI.hide();
-                fabI.setClickable(false);
-                findViewById(R.id.ivyTextView).setVisibility(View.INVISIBLE);
-                fabC.hide();
-                fabC.setClickable(false);
-                findViewById(R.id.charTextView).setVisibility(View.INVISIBLE);
-
-                //TODO creare metodo statico che distribuisce i dati raccolti
-                //componiTabelle(fetchDatas("Squirtle"));
+                intent.putExtra(CardView.NomePG, "Squirtle");
+                recreate();
             }
         });
 
         fabI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fabS.hide();
-                fabS.setClickable(false);
-                findViewById(R.id.squirlteTextView).setVisibility(View.INVISIBLE);
-                fabI.hide();
-                fabI.setClickable(false);
-                findViewById(R.id.ivyTextView).setVisibility(View.INVISIBLE);
-                fabC.hide();
-                fabC.setClickable(false);
-                findViewById(R.id.charTextView).setVisibility(View.INVISIBLE);
-
-                //TODO creare metodo statico che distribuisce i dati raccolti
-                //componiTabelle(fetchDatas("Ivysaur"));
+                intent.putExtra(CardView.NomePG, "Ivysaur");
+                recreate();
             }
         });
 
@@ -129,18 +109,8 @@ public class DataShowActivity extends AppCompatActivity {
         fabC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fabS.hide();
-                fabS.setClickable(false);
-                findViewById(R.id.squirlteTextView).setVisibility(View.INVISIBLE);
-                fabI.hide();
-                fabI.setClickable(false);
-                findViewById(R.id.ivyTextView).setVisibility(View.INVISIBLE);
-                fabC.hide();
-                fabC.setClickable(false);
-                findViewById(R.id.charTextView).setVisibility(View.INVISIBLE);
-
-                //TODO creare metodo statico che distribuisce i dati raccolti
-                //componiTabelle(fetchDatas("Charizard"));
+                intent.putExtra(CardView.NomePG, "Charizard");
+                recreate();
             }
         });
     }
@@ -155,6 +125,8 @@ public class DataShowActivity extends AppCompatActivity {
             righe.add(scanner.nextLine());
         }
         int l = 0, r = righe.size() - 1;
+        if (charName.equals("Pokemon Trainer"))
+            return righe.get(73).split(";");
         while (l <= r) {
             int m = (l + r) / 2;
             int res = charName.toLowerCase().compareTo(righe.get(m).substring(0, righe.get(m).indexOf(';')).toLowerCase());
