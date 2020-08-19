@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#00DAC9"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="1"
@@ -213,7 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#00DAC9"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_column="1"

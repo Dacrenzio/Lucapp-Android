@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,67 +63,40 @@ public class FragmentMiscInfo extends Fragment {
     }
 
     private void placeData(View root) {
-        //adding Up-Air OOS row
-        TableRow row = root.findViewById(R.id.uAirOOSRow);
-        TextView text = getTextView(row, 1f);
-        text.setText(DataShowActivity.charData[1]);
-        switch (DataShowActivity.charData[1]) {
-            case "Yes":
-                text.setBackgroundColor(Color.parseColor("#6CF324"));
-                break;
-            case "No":
-                text.setBackgroundColor(Color.parseColor("#EC1932"));
-                break;
-            default:
-                text.setBackgroundColor(Color.parseColor("#DAB851"));
-        }
-        System.out.println(text);
-        row.addView(text);
-
-        //adding DashAttck at ledge row
-        row = root.findViewById(R.id.zairUAirRow);
-        text = getTextView(row, 1f);
-        text.setText(DataShowActivity.charData[2]);
-        switch (DataShowActivity.charData[2]) {
-            case "Yes":
-                text.setBackgroundColor(Color.parseColor("#6CF324"));
-                break;
-            case "No":
-                text.setBackgroundColor(Color.parseColor("#EC1932"));
-                break;
-            default:
-                text.setBackgroundColor(Color.parseColor("#DAB851"));
-        }
-        row.addView(text);
-
-        //adding DashAttack on Ledge
-        row = root.findViewById(R.id.dashAttackRow);
-        text = getTextView(row, 1f);
-        text.setText(DataShowActivity.charData[3]);
-        switch (DataShowActivity.charData[3]) {
-            case "Yes":
-                text.setBackgroundColor(Color.parseColor("#6CF324"));
-                break;
-            case "No":
-                text.setBackgroundColor(Color.parseColor("#EC1932"));
-                break;
-            default:
-                text.setBackgroundColor(Color.parseColor("#DAB851"));
-        }
-        row.addView(text);
-        TableLayout table;
+        TableRow[] rows = {root.findViewById(R.id.uAirOOSRow), root.findViewById(R.id.zairUAirRow), root.findViewById(R.id.dashAttackRow)};
         TableRow newRow;
-        if (!text.getText().equals("No")) {
-            table = root.findViewById(R.id.dashAttack);
-            newRow = getTableRow(table, "#FFF6A6");
-            text = getTextView(newRow, 3f);
-            text.setText("Kill percentage: ");
-            text.setGravity(Gravity.LEFT);
-            newRow.addView(text);
-            text = getTextView(newRow, 1f);
-            text.setText(DataShowActivity.charData[4]);
-            newRow.addView(text);
-            table.addView(newRow);
+        TextView text;
+        TableLayout table;
+        int i = 1;
+        for (TableRow nRow : rows) {
+            text = getTextView(nRow, 1f);
+            text.setText(DataShowActivity.charData[i]);
+            switch (DataShowActivity.charData[i]) {
+                case "Yes":
+                    text.setBackgroundColor(Color.parseColor("#6CF324"));
+                    break;
+                case "No":
+                    text.setBackgroundColor(Color.parseColor("#EC1932"));
+                    break;
+                default:
+                    text.setBackgroundColor(Color.parseColor("#DAB851"));
+            }
+            nRow.addView(text);
+            if (!DataShowActivity.charData[i].equals("No") && i == 3) {
+                table = root.findViewById(R.id.dashAttack);
+                newRow = getTableRow(table, "#FFF6A6");
+                text = getTextView(newRow, 3f);
+                text.setText("Kill percentage: ");
+                text.setGravity(Gravity.LEFT);
+                int dpl = Math.round(9 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+                text.setPadding(dpl, 3, 3, 3);
+                newRow.addView(text);
+                text = getTextView(newRow, 1f);
+                text.setText(DataShowActivity.charData[++i]);
+                newRow.addView(text);
+                table.addView(newRow);
+            }
+            i++;
         }
 
         //aggiungo le mosse assorbibili
@@ -130,7 +104,7 @@ public class FragmentMiscInfo extends Fragment {
         if (DataShowActivity.charData[5].equals(""))
             table.setVisibility(View.GONE);
         else {
-            for (int i = 5; i < 26; i++) {
+            for (; i < 26; i++) {
                 if (((i + 1) / 2) % 2 == 0)
                     newRow = getTableRow(table, "#75FFC4");
                 else
