@@ -42,8 +42,9 @@ public class FragmentTechChase extends Fragment {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+            int dps = Math.round(50 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             System.out.println(dpl);
-            params.setMargins(dpl, 0, dpl, dp);
+            params.setMargins(dpl, dps, dpl, dp);
             root.findViewById(R.id.tableuthrow).setLayoutParams(params);
         }
         return root;
