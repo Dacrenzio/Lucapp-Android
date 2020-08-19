@@ -1,10 +1,12 @@
 package com.lucases.ui.main;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
@@ -36,6 +38,14 @@ public class FragmentTechChase extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_tech_chase, container, true);
         placeData(root);
+        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
+            TableLayout.LayoutParams params = new TableLayout.LayoutParams();
+            int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+            int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+            System.out.println(dpl);
+            params.setMargins(dpl, 0, dpl, dp);
+            root.findViewById(R.id.tableuthrow).setLayoutParams(params);
+        }
         return root;
     }
 

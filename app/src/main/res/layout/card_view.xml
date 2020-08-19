@@ -8,6 +8,7 @@
     app:cardCornerRadius="15dp"
     android:layout_height="wrap_content"
     app:layout_constraintCircleAngle="@android:integer/config_shortAnimTime"><!--make it transparent to see the card-->
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

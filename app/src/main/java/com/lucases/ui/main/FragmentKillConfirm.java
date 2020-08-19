@@ -2,6 +2,7 @@ package com.lucases.ui.main;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +39,15 @@ public class FragmentKillConfirm extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_kill_confirm, container, false);
         placeData(root);
+        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
+            TableLayout.LayoutParams params = new TableLayout.LayoutParams();
+            int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+            int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+            System.out.println(dpl);
+            params.setMargins(dpl, 0, dpl, dp);
+            root.findViewById(R.id.tablebairTobairKill).setLayoutParams(params);
+        }
+
         return root;
     }
 

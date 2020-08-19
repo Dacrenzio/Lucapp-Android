@@ -1,6 +1,7 @@
 package com.lucases;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
@@ -66,6 +67,7 @@ public class DataShowActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (fabS.getVisibility() != View.VISIBLE) {
+                    findViewById(R.id.tableFAB).setBackgroundResource(R.drawable.round_corner_borderd);
                     fabS.show();
                     fabS.setClickable(true);
                     findViewById(R.id.squirlteTextView).setVisibility(View.VISIBLE);
@@ -76,6 +78,7 @@ public class DataShowActivity extends AppCompatActivity {
                     fabC.setClickable(true);
                     findViewById(R.id.charTextView).setVisibility(View.VISIBLE);
                 } else {
+                    findViewById(R.id.tableFAB).setBackgroundColor(Color.TRANSPARENT);
                     fabS.hide();
                     fabS.setClickable(false);
                     findViewById(R.id.squirlteTextView).setVisibility(View.INVISIBLE);
