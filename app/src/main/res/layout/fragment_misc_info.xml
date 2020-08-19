@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="#00A89B">
+            android:background="#00DAC9">
 
             <TextView
                 android:text="Up-Air Out Of Shield"
@@ -43,14 +43,15 @@
         android:padding="1dp">
 
         <TableRow
+            android:id="@+id/dashAttackRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="#00A89B">
+            android:background="#00DAC9">
 
             <TextView
                 android:text="DashAttack at ledge"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_weight="3"
                 android:textStyle="bold" />
 
@@ -73,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
-            android:background="#00A89B">
+            android:background="#00DAC9">
 
             <TextView
                 android:text="Zair to Up-Air"
@@ -98,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
-            android:background="#00A89B">
+            android:background="#00DAC9">
 
             <TextView
                 android:text="Heal Percentages"

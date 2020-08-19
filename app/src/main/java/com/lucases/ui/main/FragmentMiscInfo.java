@@ -80,9 +80,8 @@ public class FragmentMiscInfo extends Fragment {
         row.addView(text);
 
         //adding DashAttack on Ledge
-        TableLayout table = root.findViewById(R.id.dashAttack);
-        TableRow newRow = getTableRow(table, "#E1C2FB");
-        text = getTextView(newRow, 1f);
+        row = root.findViewById(R.id.dashAttackRow);
+        text = getTextView(row, 1f);
         text.setText(DataShowActivity.charData[3]);
         switch (DataShowActivity.charData[3]) {
             case "Yes":
@@ -94,11 +93,21 @@ public class FragmentMiscInfo extends Fragment {
             default:
                 text.setBackgroundColor(Color.parseColor("#DAB851"));
         }
-        newRow.addView(text);
-        text = getTextView(newRow, 3f);
-        text.setText(DataShowActivity.charData[4]);
-        newRow.addView(text);
-        table.addView(newRow);
+        row.addView(text);
+        TableLayout table;
+        TableRow newRow;
+        if (!text.getText().equals("No")) {
+            table = root.findViewById(R.id.dashAttack);
+            newRow = getTableRow(table, "#FFF6A6");
+            text = getTextView(newRow, 3f);
+            text.setText("Kill percentage: ");
+            text.setGravity(Gravity.LEFT);
+            newRow.addView(text);
+            text = getTextView(newRow, 1f);
+            text.setText(DataShowActivity.charData[4]);
+            newRow.addView(text);
+            table.addView(newRow);
+        }
 
         //aggiungo le mosse assorbibili
         table = root.findViewById(R.id.absorbMoves);
@@ -107,9 +116,9 @@ public class FragmentMiscInfo extends Fragment {
         else {
             for (int i = 5; i < 26; i++) {
                 if (((i + 1) / 2) % 2 == 0)
-                    newRow = getTableRow(table, "#E1C2FB");
+                    newRow = getTableRow(table, "#75FFC4");
                 else
-                    newRow = getTableRow(table, "#FBF7CD");
+                    newRow = getTableRow(table, "#FFF6A6");
                 text = getTextView(newRow, 1f);
                 text.setText(DataShowActivity.charData[i++]);
                 newRow.addView(text);
