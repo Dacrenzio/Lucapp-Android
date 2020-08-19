@@ -1,12 +1,15 @@
 package com.lucases.ui.main;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -41,6 +44,17 @@ public class FragmentMiscInfo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_misc_info, container, false);
+        //Make a donation :D
+        ImageView imageView = (ImageView) root.findViewById(R.id.paypal);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("http://paypal.me/loltag22"));
+                getActivity().startActivity(i);
+            }
+        });
+        //Place all data
         placeData(root);
         return root;
     }
@@ -148,4 +162,5 @@ public class FragmentMiscInfo extends Fragment {
         text.setGravity(Gravity.CENTER);
         return text;
     }
+
 }
