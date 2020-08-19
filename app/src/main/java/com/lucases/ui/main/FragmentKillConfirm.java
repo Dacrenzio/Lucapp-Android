@@ -1,5 +1,6 @@
 package com.lucases.ui.main;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -45,6 +46,7 @@ public class FragmentKillConfirm extends Fragment {
         int i = 51;
         for (TableLayout table : tables) {
             TableRow row = new TableRow(table.getContext());
+            row.setBackgroundColor(Color.parseColor("#FFF6A6"));
             for (int j = 0; j < 4; j++) {
                 TextView text = getTextView(row, 1);
                 text.setText(DataShowActivity.charData[i++]);
@@ -53,6 +55,7 @@ public class FragmentKillConfirm extends Fragment {
             table.addView(row);
             if (i == 63) {
                 row = new TableRow(root.findViewById(R.id.tableDairLoopSide).getContext());
+                row.setBackgroundColor(Color.parseColor("#FFF6A6"));
                 TextView text = getTextView(row, 1);
                 text.setText(DataShowActivity.charData[i++]);
                 row.addView(text);
@@ -63,6 +66,7 @@ public class FragmentKillConfirm extends Fragment {
                 t.addView(row);
                 if (!DataShowActivity.charData[i].equals("")) {
                     row = new TableRow(root.findViewById(R.id.rowDairLoopNote).getContext());
+                    row.setBackgroundColor(Color.parseColor("#FFF6A6"));
                     text = getTextView(row, 1);
                     text.setText(DataShowActivity.charData[i++]);
                     row.addView(text);
