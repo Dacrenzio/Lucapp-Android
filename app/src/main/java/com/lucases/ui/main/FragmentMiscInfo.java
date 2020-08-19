@@ -53,7 +53,7 @@ public class FragmentMiscInfo extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("http://paypal.me/loltag22"));
+                i.setData(Uri.parse("https://paypal.me/dacrenzio"));
                 getActivity().startActivity(i);
             }
         });
