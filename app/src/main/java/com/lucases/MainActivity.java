@@ -245,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
             itemList.add(new CardView(R.drawable.mii_gunner, "Mii Gunner"));
             itemList.add(new CardView(R.drawable.mii_swordfighter, "Mii Swordfighter"));
             itemList.add(new CardView(R.drawable.minmin, "Minmin"));
-            itemList.add(new CardView(R.drawable.mr_game_and_watch, "Mr Game&Watch"));
+            itemList.add(new CardView(R.drawable.mr_game_and_watch, "Mr Game & Watch"));
             itemList.add(new CardView(R.drawable.ness, "Ness"));
             itemList.add(new CardView(R.drawable.olimar, "Olimar"));
             itemList.add(new CardView(R.drawable.pac_man, "Pac Man"));
@@ -260,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
             itemList.add(new CardView(R.drawable.ridley, "Ridley"));
             itemList.add(new CardView(R.drawable.rob, "R.O.B."));
             itemList.add(new CardView(R.drawable.robin, "Robin"));
-            itemList.add(new CardView(R.drawable.rosalina_and_luma, "Rosalina&Luma"));
+            itemList.add(new CardView(R.drawable.rosalina_and_luma, "Rosalina & Luma"));
             itemList.add(new CardView(R.drawable.roy, "Roy"));
             itemList.add(new CardView(R.drawable.ryu, "Ryu"));
             itemList.add(new CardView(R.drawable.samus, "Samus"));
