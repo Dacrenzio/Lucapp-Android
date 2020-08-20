@@ -36,7 +36,6 @@
                 </TextView>
             </TableRow>
         </TableLayout>
-
         <TableLayout
             android:id="@+id/tableTechrows"
             android:layout_width="match_parent"
@@ -129,7 +128,7 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="#FFF6A6"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="3"
@@ -143,7 +142,7 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="#75FFC4"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="3"
@@ -157,7 +156,7 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="#FFF6A6"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="3"
@@ -171,7 +170,7 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="#75FFC4"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="3"
@@ -185,7 +184,7 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="#FFF6A6"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="3"
@@ -195,6 +194,7 @@
 
         </TableLayout>
 
+
         <TableLayout
             android:id="@+id/tableuthrow"
             android:layout_width="match_parent"
@@ -203,7 +203,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
             android:background="@android:color/background_light"
             android:padding="1dp">
 
@@ -228,7 +227,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#FFF6A6"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="2"
@@ -242,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#75FFC4"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_weight="2"
@@ -256,7 +255,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#FFF6A6"
-                android:padding="15dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_gravity="center_vertical"
@@ -265,6 +264,341 @@
                     android:text="Town&amp;City"
                     android:textStyle="bold" />
             </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:id="@+id/tableBairTechText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableuthrow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/background_light"
+            android:padding="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#00DAC9"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="B-Air granted tech chase"
+                    android:textStyle="bold">
+
+                </TextView>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tablebairTechRage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#38491A"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="150"
+                    android:textColor="@android:color/background_light" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechBFText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tablebairTechRage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#38491A"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Battlefield"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/background_light" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechBFRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechBFText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp">
+
+            <TableRow
+                android:id="@+id/rowBairTechBF"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#FFF6A6"
+                android:padding="8dp">
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechSVText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechBFRows"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#38491A"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Smashville"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/background_light" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechSVRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechSVText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp">
+
+            <TableRow
+                android:id="@+id/rowBairTechSV"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#FFF6A6"
+                android:padding="8dp">
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechLYMText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechSVRows"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#38491A"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Lylat Middle Platform"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/background_light" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechLYMRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechLYMText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp">
+
+            <TableRow
+                android:id="@+id/rowBairTechLYM"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#FFF6A6"
+                android:padding="8dp">
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTecLYSText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechLYMRows"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#38491A"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Lylat Side Platforms"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/background_light" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechLYSRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechLYSText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp">
+
+            <TableRow
+                android:id="@+id/rowBairTechLYS"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#FFF6A6"
+                android:padding="8dp">
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTecYHText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableBairTechLYSRows"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#38491A"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Yoshi's Story"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/background_light" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableBairTechYHRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@+id/tableBairTechYHText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/background_light"
+            android:paddingHorizontal="1dp">
+
+            <TableRow
+                android:id="@+id/rowBairTechYH"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="#FFF6A6"
+                android:padding="8dp">
+
+            </TableRow>
+
         </TableLayout>
 
 

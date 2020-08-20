@@ -42,10 +42,9 @@ public class FragmentTechChase extends Fragment {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
-            int dps = Math.round(50 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             System.out.println(dpl);
-            params.setMargins(dpl, dps, dpl, dp);
-            root.findViewById(R.id.tableuthrow).setLayoutParams(params);
+            params.setMargins(dpl, 0, dpl, dp);
+            root.findViewById(R.id.tableBairTechYHRows).setLayoutParams(params);
         }
         return root;
     }
@@ -69,6 +68,16 @@ public class FragmentTechChase extends Fragment {
             if (i == 50) {
                 text = getTextView(row, 3f);
                 text.setText("Max Rage\n" + DataShowActivity.charData[i]);
+                row.addView(text);
+            }
+        }
+
+        i++;
+        rows = new TableRow[]{root.findViewById(R.id.rowBairTechBF), root.findViewById(R.id.rowBairTechSV), root.findViewById(R.id.rowBairTechLYM), root.findViewById(R.id.rowBairTechLYS), root.findViewById(R.id.rowBairTechYH)};
+        for (TableRow row : rows) {
+            for (int j = 0; j < 4; j++) {
+                TextView text = getTextView(row, 1);
+                text.setText(DataShowActivity.charData[i++]);
                 row.addView(text);
             }
         }
