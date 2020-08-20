@@ -53,7 +53,7 @@ public class FragmentKillConfirm extends Fragment {
 
     private void placeData(View root) {
         TableLayout[] tables = {root.findViewById(R.id.tableupthrowkill), root.findViewById(R.id.tableupsmashkill), root.findViewById(R.id.tableDairLoopKill), root.findViewById(R.id.tablebairTobairKill)};
-        int i = 51;
+        int i = 71;
         for (TableLayout table : tables) {
             TableRow row = new TableRow(table.getContext());
             row.setBackgroundColor(Color.parseColor("#FFF6A6"));
@@ -63,7 +63,7 @@ public class FragmentKillConfirm extends Fragment {
                 row.addView(text);
             }
             table.addView(row);
-            if (i == 63) {
+            if (i == 83) {
                 row = new TableRow(root.findViewById(R.id.tableDairLoopSide).getContext());
                 row.setBackgroundColor(Color.parseColor("#FFF6A6"));
                 TextView text = getTextView(row, 1);
