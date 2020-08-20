@@ -78,12 +78,13 @@ public class FragmentKillConfirm extends Fragment {
                     row = new TableRow(root.findViewById(R.id.rowDairLoopNote).getContext());
                     row.setBackgroundColor(Color.parseColor("#FFF6A6"));
                     text = getTextView(row, 1);
-                    text.setText(DataShowActivity.charData[i++]);
+                    text.setText(DataShowActivity.charData[i]);
                     row.addView(text);
                     t = root.findViewById(R.id.tableDairLoopNote);
                     t.setVisibility(View.VISIBLE);
                     t.addView(row);
                 }
+                i++;
             }
         }
     }
