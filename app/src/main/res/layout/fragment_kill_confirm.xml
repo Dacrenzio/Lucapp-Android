@@ -1,370 +1,361 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2B2B2B">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ImageView
+        android:layout_width="236dp"
+        android:layout_height="565dp"
+        tools:ignore="ContentDescription"
+        android:layout_gravity="end"
+        app:srcCompat="@drawable/background_killconfirm" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#2B2B2B"
-        android:orientation="vertical"
-        android:scrollbars="vertical">
+        android:fillViewport="true"
+        tools:ignore="HardcodedText">
 
-        <TableLayout
-            android:id="@+id/tableupthrowtext"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+            android:orientation="vertical">
 
-            <TableRow
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Up-Throw kill %"
-                    android:textStyle="bold">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-                </TextView>
-            </TableRow>
-        </TableLayout>
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Up-Throw kill %"
+                        android:textStyle="bold">
 
-        <TableLayout
-            android:id="@+id/tableupthrowkill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableupthrowtext"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+                    </TextView>
+                </TableRow>
+            </TableLayout>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:background="#38491A"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="50"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="150"
-                    android:textColor="@android:color/background_light" />
-            </TableRow>
-
-
-        </TableLayout>
-
-        <TableLayout
-            android:id="@+id/tableupsmashtext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableupthrowkill"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
-
-            <TableRow
+            <TableLayout
+                android:id="@+id/tableupthrowkill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Up-Smash kill %"
-                    android:textStyle="bold">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
 
-                </TextView>
-            </TableRow>
-        </TableLayout>
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/background_light" />
 
-        <TableLayout
-            android:id="@+id/tableupsmashkill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableupsmashtext"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="@android:color/background_light" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:background="#38491A"
-                android:padding="8dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@android:color/background_light" />
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="50"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="150"
-                    android:textColor="@android:color/background_light" />
-            </TableRow>
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="150"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
 
 
-        </TableLayout>
+            </TableLayout>
 
-        <TableLayout
-            android:id="@+id/tableDairLoopText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableupsmashkill"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
-
-            <TableRow
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Dair Loop %"
-                    android:textStyle="bold">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-                </TextView>
-            </TableRow>
-        </TableLayout>
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Up-Smash kill %"
+                        android:textStyle="bold">
 
-        <TableLayout
-            android:id="@+id/tableDairLoopSide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableDairLoopText"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+                    </TextView>
+                </TableRow>
+            </TableLayout>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:background="#38491A"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Front"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Back"
-                    android:textColor="@android:color/background_light" />
-            </TableRow>
-
-
-        </TableLayout>
-
-        <TableLayout
-            android:id="@+id/tableDairLoopKill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableDairLoopSide"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:background="#38491A"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="50"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="@android:color/background_light" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="150"
-                    android:textColor="@android:color/background_light" />
-            </TableRow>
-
-
-        </TableLayout>
-
-        <TableLayout
-            android:id="@+id/tableDairLoopNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableDairLoopKill"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp"
-            android:visibility="gone">
-
-            <TableRow
-                android:id="@+id/rowDairLoopNote"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:background="#38491A"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Note"
-                    android:textColor="@android:color/background_light" />
-            </TableRow>
-
-
-        </TableLayout>
-
-        <TableLayout
-            android:id="@+id/tablebairTobairText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableDairLoopNote"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
-
-            <TableRow
+            <TableLayout
+                android:id="@+id/tableupsmashkill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Sweet B-Air to Sweet B-Air"
-                    android:textStyle="bold">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
 
-                </TextView>
-            </TableRow>
-        </TableLayout>
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/background_light" />
 
-        <TableLayout
-            android:id="@+id/tablebairTobairKill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tablebairTobairText"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="50dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="@android:color/background_light" />
 
-            <TableRow
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="150"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:background="#38491A"
-                android:padding="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@android:color/background_light" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="50"
-                    android:textColor="@android:color/background_light" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Dair Loop %"
+                        android:textStyle="bold">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="@android:color/background_light" />
+                    </TextView>
+                </TableRow>
+            </TableLayout>
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="150"
-                    android:textColor="@android:color/background_light" />
-            </TableRow>
+            <TableLayout
+                android:id="@+id/tableDairLoopSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Front"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Back"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
 
 
-        </TableLayout>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableDairLoopKill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="150"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
 
 
-    </LinearLayout>
-</ScrollView>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableDairLoopNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp"
+                android:visibility="gone">
+
+                <TableRow
+                    android:id="@+id/rowDairLoopNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Note"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Sweet B-Air to Sweet B-Air"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tablebairTobairKill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="150"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

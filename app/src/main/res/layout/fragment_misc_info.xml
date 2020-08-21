@@ -1,134 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:background="#2B2B2B"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded">
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayoutFragment"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        tools:ignore="HardcodedText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#2B2B2B"
-        tools:context=".ui.main.FragmentMiscInfo">
+        android:fillViewport="true">
 
-        <TableLayout
-            android:id="@+id/uAirOOS"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+            android:orientation="vertical">
 
-            <TableRow
-                android:id="@+id/uAirOOSRow"
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="3"
-                    android:gravity="left"
-                    android:text="Up-Air Out Of Shield"
-                    android:textStyle="bold" />
+                <TableRow
+                    android:id="@+id/uAirOOSRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-            </TableRow>
-        </TableLayout>
+                    <TextView
+                        android:layout_weight="3"
+                        android:gravity="left"
+                        android:text="Up-Air Out Of Shield"
+                        android:textStyle="bold" />
 
-        <TableLayout
-            android:id="@+id/dashAttack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/uAirOOS"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginTop="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+                </TableRow>
+            </TableLayout>
 
-            <TableRow
-                android:id="@+id/dashAttackRow"
+            <TableLayout
+                android:id="@+id/dashAttack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="3"
-                    android:gravity="left"
-                    android:text="DashAttack at ledge"
-                    android:textStyle="bold" />
+                <TableRow
+                    android:id="@+id/dashAttackRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-            </TableRow>
+                    <TextView
+                        android:layout_weight="3"
+                        android:gravity="left"
+                        android:text="DashAttack at ledge"
+                        android:textStyle="bold" />
 
-        </TableLayout>
+                </TableRow>
 
-        <TableLayout
-            android:id="@+id/zairUAir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/dashAttack"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginTop="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+            </TableLayout>
 
-            <TableRow
-                android:id="@+id/zairUAirRow"
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="3"
-                    android:gravity="left"
-                    android:text="Zair to Up-Air"
-                    android:textStyle="bold" />
+                <TableRow
+                    android:id="@+id/zairUAirRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-            </TableRow>
-        </TableLayout>
+                    <TextView
+                        android:layout_weight="3"
+                        android:gravity="left"
+                        android:text="Zair to Up-Air"
+                        android:textStyle="bold" />
 
-        <TableLayout
-            android:id="@+id/absorbMoves"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/zairUAir"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginTop="30dp"
-            android:background="@android:color/background_light"
-            android:padding="1dp">
+                </TableRow>
+            </TableLayout>
 
-            <TableRow
+            <TableLayout
+                android:id="@+id/absorbMoves"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#00DAC9"
-                android:padding="12dp">
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Heal Percentages"
-                    android:textStyle="bold" />
-            </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00DAC9"
+                    android:padding="12dp">
 
-
-        </TableLayout>
-
-        <ImageView
-            android:id="@+id/paypal"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_below="@+id/absorbMoves"
-            android:layout_centerHorizontal="true"
-            android:layout_marginVertical="20dp"
-            android:layout_marginTop="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/paypal_me_donation" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Heal Percentages"
+                        android:textStyle="bold" />
+                </TableRow>
 
 
-    </RelativeLayout>
-</ScrollView>
+            </TableLayout>
+
+            <ImageView
+                android:id="@+id/paypal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/paypal_me_donation"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
