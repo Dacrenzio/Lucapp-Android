@@ -13,7 +13,7 @@
         <activity
             android:name=".DataShowActivity"
             android:label="@string/title_activity_data_show"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBarData">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />
                 <category android:name="android.intent.category.TAB" />
