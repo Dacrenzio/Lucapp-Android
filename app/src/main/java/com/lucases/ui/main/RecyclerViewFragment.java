@@ -1,4 +1,4 @@
-package com.lucases;
+package com.lucases.ui.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.lucases.CardView;
+import com.lucases.MyAdapter;
+import com.lucases.R;
 
 import java.util.ArrayList;
 
