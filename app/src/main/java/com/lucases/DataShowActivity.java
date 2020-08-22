@@ -52,7 +52,7 @@ public class DataShowActivity extends AppCompatActivity {
                 }).attach();
 
 
-        if (messageCardView.equals("Pokemon Trainer") || messageCardView.equals("Squirtle") || messageCardView.equals("Ivysaur") || messageCardView.equals("Charizard")) {
+        if (messageCardView != null && (messageCardView.equals("Pokemon Trainer") || messageCardView.equals("Squirtle") || messageCardView.equals("Ivysaur") || messageCardView.equals("Charizard"))) {
             fabManager(intent);
         }
     }
@@ -123,7 +123,7 @@ public class DataShowActivity extends AppCompatActivity {
     }
 
     private String[] fetchDatas(String charName) {
-        InputStream input = getResources().openRawResource(R.raw.datas);
+        InputStream input = getResources().openRawResource(R.raw.chardatas);
         Scanner scanner = new Scanner(input);
         scanner.nextLine();
         scanner.nextLine();
