@@ -1,5 +1,7 @@
 package com.lucases;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent i;
         switch (item.getItemId()) {
             case R.id.nav_charTech:
                 findViewById(R.id.actionSearch).setVisibility(View.VISIBLE);
@@ -53,10 +56,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_combos:
             case R.id.nav_tutorial:
+                Toast.makeText(this, "Work in progress!", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.nav_respureceFile:
+                i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("https://docs.google.com/spreadsheets/d/1lCVfUxWdrXDzIJBMYjvxPhJQ4FI0w-owyZkFcIPjUFE/edit#gid=390033085"));
+                startActivity(i);
+                break;
             case R.id.nav_discord:
+                i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("https://discord.gg/Y5fjHed"));
+                startActivity(i);
+                break;
             case R.id.nav_donate:
-                Toast.makeText(this, "work in progress", Toast.LENGTH_SHORT).show();
+                i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("https://paypal.me/dacrenzio"));
+                startActivity(i);
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

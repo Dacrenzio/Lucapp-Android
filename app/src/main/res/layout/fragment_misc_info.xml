@@ -120,20 +120,6 @@
 
 
             </TableLayout>
-
-            <ImageView
-                android:id="@+id/paypal"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="20dp"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:src="@drawable/paypal_me_donation"
-                tools:ignore="ContentDescription" />
-
-
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
