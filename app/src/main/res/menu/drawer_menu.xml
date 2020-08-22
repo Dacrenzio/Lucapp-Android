@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_charTech"
+            android:title="Character specific techs" />
+
+        <item
+            android:id="@+id/nav_combos"
+            android:title="Lucas combos" />
+
+        <item
+            android:id="@+id/nav_tutorial"
+            android:title="Tutorials" />
+
+    </group>
+
+    <item android:title="External">
+        <menu>
+            <item
+                android:id="@+id/nav_respureceFile"
+                android:title="Resource File" />
+
+            <item
+                android:id="@+id/nav_discord"
+                android:title="Join the Discord!" />
+
+            <item
+                android:id="@+id/nav_donate"
+                android:title="Want to support? Donate" />
+        </menu>
+    </item>
+</menu>
