@@ -19,6 +19,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.lucases.ui.main.ComboViewFragment;
 import com.lucases.ui.main.RecyclerViewFragment;
 
 import java.util.Objects;
@@ -58,8 +59,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecyclerViewFragment()).commit();
                 break;
             case R.id.nav_combos:
-                //findViewById(R.id.actionSearch).setVisibility(View.INVISIBLE);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ComboViewFragment()).commit();
+                findViewById(R.id.actionSearch).setVisibility(View.INVISIBLE);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ComboViewFragment()).commit();
+                break;
             case R.id.nav_tutorial:
                 Toast.makeText(this, "Work in progress!", Toast.LENGTH_SHORT).show();
                 break;
