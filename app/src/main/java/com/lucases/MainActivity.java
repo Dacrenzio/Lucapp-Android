@@ -21,6 +21,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.lucases.ui.main.RecyclerViewFragment;
 
+import java.util.Objects;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START);
-        else if (navigationView.getCheckedItem() != findViewById(R.id.nav_charTech)) {
+        else if (Objects.requireNonNull(navigationView.getCheckedItem()).getItemId() != R.id.nav_charTech) {
             findViewById(R.id.actionSearch).setVisibility(View.VISIBLE);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecyclerViewFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_charTech);

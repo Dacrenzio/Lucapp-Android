@@ -123,7 +123,7 @@ public class DataShowActivity extends AppCompatActivity {
     }
 
     private String[] fetchDatas(String charName) {
-        InputStream input = getResources().openRawResource(R.raw.chardatas);
+        InputStream input = getResources().openRawResource(R.raw.char_datas);
         Scanner scanner = new Scanner(input);
         scanner.nextLine();
         scanner.nextLine();
