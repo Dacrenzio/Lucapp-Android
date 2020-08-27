@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.lucases.R;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
@@ -29,6 +30,36 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 public class ComboViewFragment extends Fragment {
+    public static final String ARG_SECTION_NUMBER = "section_number";
+    private String[] dataRows;
+    private String[] percent;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        int index = 1;
+        if (getArguments() != null) {
+            index = getArguments().getInt(ARG_SECTION_NUMBER);
+        }
+        switch(index) {
+            case 1:
+                dataRows = ComboNavMenuPrincipal.datasRowLow;
+                percent = new String[]{"0% Combo"};
+                break;
+            case 2:
+                dataRows = ComboNavMenuPrincipal.datasRowMedium;
+                percent = new String[]{"30% Combo"};
+                break;
+            case 3:
+                dataRows = ComboNavMenuPrincipal.datasRowMedHigh;
+                percent = new String[]{"50% combo", "75% Combo"};
+                break;
+            default:
+                dataRows = ComboNavMenuPrincipal.datasRowHigh;
+                percent = new String[]{"100% Combo", "150% Combo"};
+        }
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_combo, container, false);
@@ -38,20 +69,15 @@ public class ComboViewFragment extends Fragment {
 
     private void placeData(View root) {
         LinearLayout page = root.findViewById(R.id.comboLinearLayout);
-        String[] comboPercent = {"0% Combo", "30% Combo", "50% Combo", "75% Combo", "100% Combo", "150% Combo"};
-        InputStream input = getResources().openRawResource(R.raw.combo_datas);
-        Scanner scanner = new Scanner(input);
-        scanner.nextLine();
-        scanner.nextLine();
-
         TableLayout newTableRoot;
         TableRow newRow;
         TextView newText;
+
         boolean first = true;
         int c = 0;
-        while (scanner.hasNextLine()) {
-            String[] datas = scanner.nextLine().split(";");
-            if (c < 5 && datas[0].contains(comboPercent[c + 1])) {
+        for(String row: dataRows) {
+            String[] datas = row.split(";");
+            if (c < 1 && percent.length != 1 && datas[0].contains(percent[c + 1])) {
                 c++;
                 continue;
             }
@@ -71,7 +97,7 @@ public class ComboViewFragment extends Fragment {
             newRow = getTableRow(newTableRoot, "#00DAC9", 12);
             newText = getTextView(newRow, 1f);
             newText.setGravity(Gravity.LEFT);
-            newText.setText(comboPercent[c]);
+            newText.setText(percent[c]);
             newText.setTypeface(null, Typeface.BOLD);
             newRow.addView(newText);
             newTableRoot.addView(newRow);
@@ -134,14 +160,13 @@ public class ComboViewFragment extends Fragment {
             videoView.initialize(new AbstractYouTubePlayerListener() {
                 @Override
                 public void onReady(YouTubePlayer youTubePlayer) {
-                    System.out.println("jhaosdjoiasjdoidj");
                     youTubePlayer.cueVideo(datas[9], 0);
+                    videoView.setVisibility(View.VISIBLE);
                 }
             }, true);
+
             videoView.getPlayerUiController().showFullscreenButton(false).showVideoTitle(false).showMenuButton(false);
-
-
-
+            videoView.setVisibility(View.GONE);
             videoView.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
 
             newRow.addView(videoView);
