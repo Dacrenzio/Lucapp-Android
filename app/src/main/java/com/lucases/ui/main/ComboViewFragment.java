@@ -138,6 +138,8 @@ public class ComboViewFragment extends Fragment {
                     youTubePlayer.cueVideo(datas[9], 0);
                 }
             }, true);
+            videoView.getPlayerUiController().showFullscreenButton(false).showVideoTitle(false).showMenuButton(false);
+
 
 
             videoView.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
