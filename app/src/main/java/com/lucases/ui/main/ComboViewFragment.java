@@ -17,6 +17,13 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.lucases.R;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerCallback;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerFullScreenListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.io.InputStream;
 import java.util.Scanner;
@@ -116,23 +123,37 @@ public class ComboViewFragment extends Fragment {
             newTable.addView(newRow);
             newTableRoot.addView(newTable);
 
-            //passo 5.0 creare table per video e note
+            //passo 5.0 creare table per videoView e note
             newTable = getTable(newTableRoot, 0);
-            //passo 5.1 creare la row per il video
+            //passo 5.1 creare la row per il videoView
             newRow = getTableRow(newTable, "#FFF6A6", 4);
-            newText = getTextView(newRow, 1f);
-            newText.setText("video is showed here");
-            newRow.addView(newText);
+
+            //passo 5.2 creare Youtube Player View
+            YouTubePlayerView videoView = new YouTubePlayerView(newRow.getContext());
+            videoView.setEnableAutomaticInitialization(false);
+            videoView.initialize(new AbstractYouTubePlayerListener() {
+                @Override
+                public void onReady(YouTubePlayer youTubePlayer) {
+                    System.out.println("jhaosdjoiasjdoidj");
+                    youTubePlayer.cueVideo(datas[9], 0);
+                }
+            }, true);
+
+
+            videoView.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+
+            newRow.addView(videoView);
             newTable.addView(newRow);
+
             if (!datas[8].equals("")) {
-                //passo 5.2 creare la row per le Note
+                //passo 5.3 creare la row per le Note
                 newRow = getTableRow(newTable, "#38491A", 8);
                 newText = getTextView(newRow, 1f);
                 newText.setText("Note:");
                 newText.setTextColor(Color.parseColor("#FFFFFF"));
                 newRow.addView(newText);
                 newTable.addView(newRow);
-                //passo 5.3 creare la row per le Note data
+                //passo 5.4 creare la row per le Note data
                 newRow = getTableRow(newTable, "#FFF6A6", 8);
                 newText = getTextView(newRow, 1f);
                 newText.setText(datas[8]);
