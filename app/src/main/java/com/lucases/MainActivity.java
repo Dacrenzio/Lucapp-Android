@@ -19,9 +19,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.lucases.ui.main.ComboNavMenuPrincipal;
-import com.lucases.ui.main.ComboViewFragment;
-import com.lucases.ui.main.RecyclerViewFragment;
+import com.lucases.ui.main.ComboFragment.ComboNavMenuPrincipal;
+import com.lucases.ui.main.RecyclerView.RecyclerViewFragment;
 
 import java.util.Objects;
 

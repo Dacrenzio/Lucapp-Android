@@ -1,4 +1,4 @@
-package com.lucases.ui.main;
+package com.lucases.ui.main.RecyclerView;
 
 import android.graphics.Color;
 import android.graphics.Typeface;

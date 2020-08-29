@@ -1,4 +1,4 @@
-package com.lucases.ui.main;
+package com.lucases.ui.main.ComboFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

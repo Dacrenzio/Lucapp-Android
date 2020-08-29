@@ -12,7 +12,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.lucases.ui.main.SectionsPagerAdapter;
+import com.lucases.ui.main.RecyclerView.SectionsPagerAdapter;
 
 import java.io.InputStream;
 import java.util.ArrayList;
