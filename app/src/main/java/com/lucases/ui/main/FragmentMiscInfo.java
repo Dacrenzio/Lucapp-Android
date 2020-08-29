@@ -18,9 +18,6 @@ import androidx.lifecycle.ViewModelProviders;
 import com.lucases.DataShowActivity;
 import com.lucases.R;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class FragmentMiscInfo extends Fragment {
 
     public static final String ARG_SECTION_NUMBER = "section_number";
@@ -48,7 +45,7 @@ public class FragmentMiscInfo extends Fragment {
         for (TableRow nRow : rows) {
             text = getTextView(nRow, 1f);
             text.setText(DataShowActivity.charData[i]);
-            switch (DataShowActivity.charData[i]) {
+            switch (DataShowActivity. charData[i]) {
                 case "Yes":
                     text.setBackgroundColor(Color.parseColor("#6CF324"));
                     break;
@@ -72,6 +69,8 @@ public class FragmentMiscInfo extends Fragment {
                 text.setText(DataShowActivity.charData[++i]);
                 newRow.addView(text);
                 table.addView(newRow);
+            } else if(i==3){
+                i++;
             }
             i++;
         }
