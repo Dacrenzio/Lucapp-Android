@@ -161,12 +161,10 @@ public class ComboViewFragment extends Fragment {
                 @Override
                 public void onReady(YouTubePlayer youTubePlayer) {
                     youTubePlayer.cueVideo(datas[9], 0);
-                    videoView.setVisibility(View.VISIBLE);
                 }
             }, true);
 
             videoView.getPlayerUiController().showFullscreenButton(false).showVideoTitle(false).showMenuButton(false);
-            videoView.setVisibility(View.GONE);
             videoView.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
 
             newRow.addView(videoView);
