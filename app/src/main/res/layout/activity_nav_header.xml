@@ -22,7 +22,9 @@
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            tools:ignore="NewApi" />
+            tools:ignore="NewApi"
+            app:titleTextColor="#FFFFFF"
+            />
 
         <FrameLayout
             android:id="@+id/fragment_container"

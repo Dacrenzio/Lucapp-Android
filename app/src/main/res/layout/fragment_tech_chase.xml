@@ -6,13 +6,13 @@
     android:background="#2B2B2B"
     tools:ignore="HardcodedText">
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="320dp"
         android:layout_height="240dp"
         tools:ignore="ContentDescription"
         android:layout_gravity="bottom"
         android:src="@drawable/background_techchase" />
-
+    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView
@@ -216,7 +216,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView
@@ -286,7 +286,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView

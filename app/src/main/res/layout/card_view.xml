@@ -21,7 +21,7 @@
             android:layout_height="130dp"
             android:padding="2dp"
             android:background="#2B2B2B"
-            tools:ignore="ContentDescription"></ImageView>
+            tools:ignore="ContentDescription"/>
 
         <TextView
             android:id="@+id/TextView"

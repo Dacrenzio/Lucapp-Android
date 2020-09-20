@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:background="#2B2B2B">
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="236dp"
         android:layout_height="565dp"
         tools:ignore="ContentDescription"
         android:layout_gravity="end"
         android:src="@drawable/background_killconfirm" />
-
+    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView
@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView
@@ -171,7 +171,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView
@@ -297,7 +297,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#00DAC9"
+                    android:background="#5efcff"
                     android:padding="12dp">
 
                     <TextView

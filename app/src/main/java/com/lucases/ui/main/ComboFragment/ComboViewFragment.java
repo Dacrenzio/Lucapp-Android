@@ -94,7 +94,7 @@ public class ComboViewFragment extends Fragment {
             newTableRoot.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
             //passo 2: creare una row con su scritto "n% Combo"
-            newRow = getTableRow(newTableRoot, "#00DAC9", 12);
+            newRow = getTableRow(newTableRoot, "#5efcff", 12);
             newText = getTextView(newRow, 1f);
             newText.setGravity(Gravity.LEFT);
             newText.setText(percent[c]);
