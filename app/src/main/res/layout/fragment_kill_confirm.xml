@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:background="#2B2B2B">
 
-    <!--<ImageView
+    <ImageView
         android:layout_width="236dp"
         android:layout_height="565dp"
         tools:ignore="ContentDescription"
         android:layout_gravity="end"
         android:src="@drawable/background_killconfirm" />
-    -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -12,10 +12,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-10dp"
         android:layout_marginTop="-10dp"
         android:layout_marginBottom="-10dp"
-        android:src="@mipmap/zzzz_launcher_round_icon_foreground"
+        android:src="@mipmap/ic_launcher_round"
         android:layout_marginStart="-10dp"
         tools:ignore="ContentDescription" />
 

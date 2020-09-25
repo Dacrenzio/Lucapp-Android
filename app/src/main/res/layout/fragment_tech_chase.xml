@@ -6,13 +6,13 @@
     android:background="#2B2B2B"
     tools:ignore="HardcodedText">
 
-    <!--<ImageView
+    <ImageView
         android:layout_width="320dp"
         android:layout_height="240dp"
         tools:ignore="ContentDescription"
         android:layout_gravity="bottom"
         android:src="@drawable/background_techchase" />
-    -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
