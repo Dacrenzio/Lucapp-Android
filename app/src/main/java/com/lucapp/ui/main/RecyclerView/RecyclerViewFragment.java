@@ -25,7 +25,7 @@ public class RecyclerViewFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.activity_recycler_fragment, container, false);
+        View root = inflater.inflate(R.layout.fragment_recycler_view_card, container, false);
 
         itemList = new ArrayList<>();
         /*int[] idPersonaggi = {R.drawable.banjo_and_kazooie,
