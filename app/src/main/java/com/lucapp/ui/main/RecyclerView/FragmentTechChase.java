@@ -29,11 +29,12 @@ public class FragmentTechChase extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.data_fragment_tech_chase, container, true);
         placeData(root);
+
+        //aggiungo dello spazio extra in fondo per non far sovrapporre la FAB alla table
         if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
-            System.out.println(dpl);
             params.setMargins(dpl, 0, dpl, dp);
             root.findViewById(R.id.tableBairTechYHRows).setLayoutParams(params);
         }

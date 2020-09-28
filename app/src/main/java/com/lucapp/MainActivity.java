@@ -21,6 +21,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.lucapp.ui.main.ComboFragment.ComboNavMenuPrincipal;
 import com.lucapp.ui.main.RecyclerView.RecyclerViewFragment;
+import com.lucapp.ui.main.TutorialFragment.TutorialViewFragment;
 
 import java.util.Objects;
 
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ComboNavMenuPrincipal()).commit();
                 break;
             case R.id.nav_tutorial:
-                Toast.makeText(this, "Work in progress!", Toast.LENGTH_SHORT).show();
+                findViewById(R.id.actionSearch).setVisibility(View.INVISIBLE);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TutorialViewFragment()).commit();
                 break;
             case R.id.nav_respureceFile:
                 i = new Intent(Intent.ACTION_VIEW);

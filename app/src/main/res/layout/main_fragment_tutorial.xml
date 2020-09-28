@@ -1,5 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B2B2B"
+    android:fillViewport="true"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_psi_magnet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp"
+            android:text="PSI-Magnet tutorials"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/magnet_tutorials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="#FFFFFF"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2B2B2B"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Mastering PSI-Magnet"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    app:enableLiveVideoUi="false"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="clKwx_FuVf8" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Magnet Movement"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="4-V8bZD9oRg" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <Button
+        android:id="@+id/button_thunder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:paddingHorizontal="1dp"
+        android:paddingTop="1dp"
+        android:text="PK-Thunder tutorials"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/thunder_tutorials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="#FFFFFF"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2B2B2B"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="PK-Thunder Edgeguard"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="_H7-yTCQdo0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Defensive PK-Thunder options"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="Z-yMTqLk-Lg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="PK-Thunder Bonking"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="DqF-d8-POHc"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_dairLoop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp"
+            android:text="d-air loop tutorial"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/dair_loop_tutorials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="#FFFFFF"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2B2B2B"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="D-air Loop"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="N93xBif8yf0"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_djcz"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:paddingHorizontal="1dp"
+            android:paddingTop="1dp"
+            android:text="djcz tutorials"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/djcz_tutorials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="#FFFFFF"
+            android:padding="1dp"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2B2B2B"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="DJCZ video guide"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="MA1bVZEyPQ0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#FFFFFF"
+                    android:paddingHorizontal="1dp"
+                    android:paddingTop="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#5efcff"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="DJCZ movement"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#FFFFFF"
+                    android:padding="1dp"
+                    app:autoPlay="false"
+                    app:showFullScreenButton="false"
+                    app:videoId="sYd7FJ5rMus" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 </ScrollView>

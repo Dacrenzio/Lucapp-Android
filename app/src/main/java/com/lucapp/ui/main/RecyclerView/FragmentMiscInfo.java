@@ -29,7 +29,6 @@ public class FragmentMiscInfo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.data_fragment_misc_info, container, false);
-        //Place all data
         placeData(root);
         return root;
     }
