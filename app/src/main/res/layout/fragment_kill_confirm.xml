@@ -303,7 +303,7 @@
                     <TextView
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Sweet B-Air to Sweet B-Air"
+                        android:text="Sweet B-Air to anything"
                         android:textStyle="bold">
 
                     </TextView>
