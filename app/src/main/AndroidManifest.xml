@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
     <activity
-            android:name="com.lucapp.DataShowActivity"
+            android:name="com.lucapp.ui.main.RecyclerView.DataShowActivity"
             android:label="@string/title_activity_data_show"
             android:theme="@style/AppTheme.NoActionBarData">
             <intent-filter>

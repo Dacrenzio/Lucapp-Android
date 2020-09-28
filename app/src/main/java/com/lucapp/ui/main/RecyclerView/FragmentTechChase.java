@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.lucapp.DataShowActivity;
 import com.lucapp.R;
 
 public class FragmentTechChase extends Fragment {
@@ -28,7 +27,7 @@ public class FragmentTechChase extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_tech_chase, container, true);
+        View root = inflater.inflate(R.layout.data_fragment_tech_chase, container, true);
         placeData(root);
         if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();

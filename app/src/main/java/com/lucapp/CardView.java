@@ -3,6 +3,8 @@ package com.lucapp;
 import android.content.Context;
 import android.content.Intent;
 
+import com.lucapp.ui.main.RecyclerView.DataShowActivity;
+
 public class CardView {
     public static final String NomePG = "com.lucases.MESSAGE";
     private int imageResource;

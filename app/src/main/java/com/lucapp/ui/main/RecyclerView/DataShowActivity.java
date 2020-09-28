@@ -1,4 +1,4 @@
-package com.lucapp;
+package com.lucapp.ui.main.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +12,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.lucapp.CardView;
+import com.lucapp.R;
 import com.lucapp.ui.main.RecyclerView.SectionsPagerAdapter;
 
 import java.io.InputStream;
