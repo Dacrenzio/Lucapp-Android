@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#2B2B2B">
 
     <ImageView
@@ -10,7 +11,7 @@
         android:layout_height="565dp"
         tools:ignore="ContentDescription"
         android:layout_gravity="end"
-        android:src="@drawable/background_killconfirm" />
+        app:srcCompat="@drawable/background_killconfirm"/>
 
     <ScrollView
         android:layout_width="match_parent"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#2B2B2B"
     tools:ignore="HardcodedText">
 
@@ -11,7 +12,7 @@
         android:layout_height="240dp"
         tools:ignore="ContentDescription"
         android:layout_gravity="bottom"
-        android:src="@drawable/background_techchase" />
+        app:srcCompat="@drawable/background_techchase" />
 
     <ScrollView
         android:layout_width="match_parent"
