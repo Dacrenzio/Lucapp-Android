@@ -12,16 +12,16 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp"
-        android:layout_marginBottom="-10dp"
-        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginStart="-25dp"
+        android:src="@mipmap/icon_fan_made_foreground"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:text="Lucases App"
+        android:text="Lucas App made by Dacrenzio"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         tools:ignore="HardcodedText" />
 
