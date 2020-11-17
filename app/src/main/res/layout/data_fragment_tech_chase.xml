@@ -48,7 +48,6 @@
                     </TextView>
                 </TableRow>
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -273,8 +272,6 @@
                         android:textStyle="bold" />
                 </TableRow>
             </TableLayout>
-
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -293,13 +290,12 @@
                     <TextView
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="B-Air granted tech chase"
+                        android:text="U-tilt granted tech chase"
                         android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -340,7 +336,292 @@
                 </TableRow>
 
             </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp"
+                android:paddingTop="1dp">
 
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Battlefield Side Platform"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp">
+
+                <TableRow
+                    android:id="@+id/rowUtiltTechBFSide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#FFF6A6"
+                    android:padding="8dp">
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp"
+                android:paddingTop="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Yoshi Story Side Platform"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp">
+
+                <TableRow
+                    android:id="@+id/rowUtiltTechYSSide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#FFF6A6"
+                    android:padding="8dp">
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp"
+                android:paddingTop="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Pokemon Stadium 2 Platforms"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp">
+
+                <TableRow
+                    android:id="@+id/rowUtiltTechPS2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#FFF6A6"
+                    android:padding="8dp">
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp"
+                android:paddingTop="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="SmashVille Platform"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp">
+
+                <TableRow
+                    android:id="@+id/rowUtiltTechSV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#FFF6A6"
+                    android:padding="8dp">
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp"
+                android:paddingTop="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TowneCity Side Platform"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp">
+
+                <TableRow
+                    android:id="@+id/rowUtiltTechTeC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#FFF6A6"
+                    android:padding="8dp">
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/background_light"
+                android:padding="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#5efcff"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="B-Air granted tech chase"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@android:color/background_light"
+                android:paddingHorizontal="1dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#38491A"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="150"
+                        android:textColor="@android:color/background_light" />
+                </TableRow>
+
+            </TableLayout>
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -367,7 +648,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -386,7 +666,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -413,7 +692,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -432,7 +710,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -459,7 +736,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -478,7 +754,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -505,7 +780,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -524,7 +798,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -551,7 +824,6 @@
                 </TableRow>
 
             </TableLayout>
-
             <TableLayout
                 android:id="@+id/tableBairTechYHRows"
                 android:layout_width="match_parent"

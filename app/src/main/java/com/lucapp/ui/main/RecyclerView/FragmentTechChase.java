@@ -30,7 +30,7 @@ public class FragmentTechChase extends Fragment {
         View root = inflater.inflate(R.layout.data_fragment_tech_chase, container, true);
         placeData(root);
 
-        //aggiungo dello spazio extra in fondo per non far sovrapporre la FAB alla table
+        //extra margin to not overlapp FAB with tables
         if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
@@ -43,8 +43,8 @@ public class FragmentTechChase extends Fragment {
 
     private void placeData(View root) {
         TableRow[] rows = {root.findViewById(R.id.sweetZair), root.findViewById(R.id.sourZair), root.findViewById(R.id.sourfair), root.findViewById(R.id.sourftilt), root.findViewById(R.id.sourbair)};
-        int i = 27;
-        for (TableRow row : rows) {
+        int i = 27; //starts of Tech chase datas;
+        for (TableRow row : rows) {//tech chase datas
             for (int j = 0; j < 4; j++) {
                 TextView text = getTextView(row, 1);
                 text.setText(DataShowActivity.charData[i++]);
@@ -53,7 +53,7 @@ public class FragmentTechChase extends Fragment {
         }
 
         rows = new TableRow[]{root.findViewById(R.id.battlefieldRow), root.findViewById(R.id.yoshiRow), root.findViewById(R.id.townRow)};
-        for (TableRow row : rows) {
+        for (TableRow row : rows) {//upThrow datas
             TextView text = getTextView(row, 1f);
             text.setText(DataShowActivity.charData[i++]);
             row.addView(text);
@@ -65,12 +65,16 @@ public class FragmentTechChase extends Fragment {
         }
 
         i++;
-        rows = new TableRow[]{root.findViewById(R.id.rowBairTechBF), root.findViewById(R.id.rowBairTechSV), root.findViewById(R.id.rowBairTechLYM), root.findViewById(R.id.rowBairTechLYS), root.findViewById(R.id.rowBairTechYH)};
-        for (TableRow row : rows) {
+        rows = new TableRow[]{root.findViewById(R.id.rowBairTechBF), root.findViewById(R.id.rowBairTechSV), root.findViewById(R.id.rowBairTechLYM), root.findViewById(R.id.rowBairTechLYS), root.findViewById(R.id.rowBairTechYH),
+                root.findViewById(R.id.rowUtiltTechBFSide), root.findViewById(R.id.rowUtiltTechYSSide), root.findViewById(R.id.rowUtiltTechPS2), root.findViewById(R.id.rowUtiltTechSV), root.findViewById(R.id.rowUtiltTechTeC)};
+        for (TableRow row : rows) {//utilt and bair datas
             for (int j = 0; j < 4; j++) {
                 TextView text = getTextView(row, 1);
                 text.setText(DataShowActivity.charData[i++]);
                 row.addView(text);
+            }
+            if (i == 71) {
+                i = 90;
             }
         }
     }
