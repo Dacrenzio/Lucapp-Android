@@ -30,6 +30,28 @@ public class FragmentMiscInfo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.data_fragment_misc_info, container, false);
         placeData(root);
+
+        //aggiungo dello spazio extra in fondo per non far sovrapporre la FAB alla table
+        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
+            TableLayout.LayoutParams params = new TableLayout.LayoutParams();
+            int dpl = Math.round(60 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+            int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+
+            if(root.findViewById(R.id.pressure_notes).getVisibility() == View.VISIBLE){
+                params.setMargins(dpl, 0, dpl, dp);
+                root.findViewById(R.id.pressure_notes).setLayoutParams(params);
+            } else if(root.findViewById(R.id.shield_pressure_options).getVisibility() == View.VISIBLE){
+                params.setMargins(dpl, 0, dpl, dp);
+                root.findViewById(R.id.shield_pressure_options).setLayoutParams(params);
+            } else{
+                int dpt =  Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+                params.setMargins(dpl, dpt, dpl, dp);
+                root.findViewById(R.id.shield_pressure_table).setLayoutParams(params);
+            }
+
+        }
+
+
         return root;
     }
 
@@ -42,7 +64,7 @@ public class FragmentMiscInfo extends Fragment {
         for (TableRow nRow : rows) {
             text = getTextView(nRow, 1f);
             text.setText(DataShowActivity.charData[i]);
-            switch (DataShowActivity. charData[i]) {
+            switch (DataShowActivity. charData[i]) {//setting color of text
                 case "Yes":
                     text.setBackgroundColor(Color.parseColor("#6CF324"));
                     break;
@@ -53,7 +75,7 @@ public class FragmentMiscInfo extends Fragment {
                     text.setBackgroundColor(Color.parseColor("#DAB851"));
             }
             nRow.addView(text);
-            if (!DataShowActivity.charData[i].equals("No") && i == 3) {
+            if (!DataShowActivity.charData[i].equals("No") && i == 3) {//if it can be hit, show the kill%
                 table = root.findViewById(R.id.dashAttack);
                 newRow = getTableRow(table, "#FFF6A6");
                 text = getTextView(newRow, 3f);
@@ -72,16 +94,17 @@ public class FragmentMiscInfo extends Fragment {
             i++;
         }
 
-        //aggiungo le mosse assorbibili
+        //adding absorb moves
         table = root.findViewById(R.id.absorbMoves);
         if (DataShowActivity.charData[5].equals(""))
             table.setVisibility(View.GONE);
         else {
             for (; i < 26; i++) {
-                if (((i + 1) / 2) % 2 == 0)
+                if (((i+1)/2) % 2 == 0)
                     newRow = getTableRow(table, "#75FFC4");
                 else
                     newRow = getTableRow(table, "#FFF6A6");
+
                 text = getTextView(newRow, 1f);
                 text.setText(DataShowActivity.charData[i++]);
                 newRow.addView(text);
@@ -91,6 +114,84 @@ public class FragmentMiscInfo extends Fragment {
                 table.addView(newRow);
                 if (DataShowActivity.charData[i + 1].equals(""))
                     break;
+            }
+        }
+
+        //adding shield pressure options
+        i = 110;
+        if(!DataShowActivity.charData[i++].equals("Yes")){
+            table = root.findViewById(R.id.shield_pressure_options);
+            table.setVisibility(View.VISIBLE);
+            for(; i<115; i++) {
+                if (!DataShowActivity.charData[i].equals("")) {
+                    String color = "";
+                    String trade = "";
+                    switch(i){
+                        case 111:
+                            color = "#75FFC4";
+                            trade = "Good Trade: ";
+                            break;
+                        case 112:
+                            color =  "#DB7979";
+                            trade = "Bad Trade: ";
+                            break;
+                        case 113:
+                            color = "#FF8A8A";
+                            trade = "Loses: ";
+                            break;
+                        case 114:
+                            color = "#75FFC4";
+                            trade = "Can N-Airdodge";
+                    }
+
+                    newRow = getTableRow(table, color);
+                    text = getTextView(newRow, 2f);
+                    text.setText(trade);
+                    newRow.addView(text);
+                    text = getTextView(newRow, 1f);
+                    text.setText(DataShowActivity.charData[i]);
+                    if(i == 114){
+                        if(DataShowActivity.charData[i].equals("Yes")){
+                            text.setBackgroundColor(Color.parseColor("#6CF324"));
+                        } else{
+                            text.setBackgroundColor(Color.parseColor("#EC1932"));
+                        }
+                    }
+                    newRow.addView(text);
+                    table.addView(newRow);
+                }
+            }
+        }else{
+            TableRow row = root.findViewById(R.id.shield_pressure);
+            text = getTextView(row, 1f);
+            text.setText("Yes");
+            text.setBackgroundColor(Color.parseColor("#6CF324"));
+            row.addView(text);
+        }
+        i = 115;//adding pressure notes
+        if(!DataShowActivity.charData[i].equals("")){
+            table = root.findViewById(R.id.pressure_notes);
+            table.setVisibility(View.VISIBLE);
+            newRow = getTableRow(table, "#FFF6A6");
+            text = getTextView(newRow, 1f);
+            text.setText(DataShowActivity.charData[i]);
+            newRow.addView(text);
+            table.addView(newRow);
+        }
+
+        //adding margin if notesRow is invisible or if notesRow and optionsRow are invisible
+        TableLayout.LayoutParams params = new TableLayout.LayoutParams();
+        int dpl = Math.round(60 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+        int dp = Math.round(50 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+
+        if(root.findViewById(R.id.pressure_notes).getVisibility() != View.VISIBLE) {
+            if (root.findViewById(R.id.shield_pressure_options).getVisibility() == View.VISIBLE) {
+                params.setMargins(dpl, 0, dpl, dp);
+                root.findViewById(R.id.shield_pressure_options).setLayoutParams(params);
+            } else {
+                int dpt = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+                params.setMargins(dpl, dpt, dpl, dp);
+                root.findViewById(R.id.shield_pressure_table).setLayoutParams(params);
             }
         }
     }
