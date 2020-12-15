@@ -24,6 +24,7 @@ public class CardView {
     }
 
     public void click(Context c){
+        //go to the character page
         //Toast.makeText(c, "Clicked on " + this.text, Toast.LENGTH_LONG).show();
         Intent intent = new Intent(c, DataShowActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -35,6 +35,8 @@ public class DataShowActivity extends AppCompatActivity {
         TextView charName = findViewById(R.id.charName);
         charName.setText(charData[0]);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this);
+
+        //the ViewPager is the tab system in the dataShowActivity that shows fragments with the collaboration of the SectionPagerAdapter
         ViewPager2 viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
@@ -60,6 +62,7 @@ public class DataShowActivity extends AppCompatActivity {
     }
 
     private void fabManager(Intent intent) {
+        //turning the first FAB visible and clickable when is one of the pokemon's pokemon Trainer
         FloatingActionButton fab = findViewById(R.id.fab);
         findViewById(R.id.tableFAB).setVisibility(View.VISIBLE);
         fab.setVisibility(View.VISIBLE);
@@ -68,6 +71,7 @@ public class DataShowActivity extends AppCompatActivity {
         FloatingActionButton fabI = findViewById(R.id.fabIvy);
         FloatingActionButton fabC = findViewById(R.id.fabChar);
 
+        //turning the FABs visible or invisible
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,7 +101,7 @@ public class DataShowActivity extends AppCompatActivity {
             }
         });
 
-
+        //recreating the Activity with the Name of the pokemon wanted by changing the intent
         fabS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,6 +131,8 @@ public class DataShowActivity extends AppCompatActivity {
     private String[] fetchDatas(String charName) {
         InputStream input = getResources().openRawResource(R.raw.char_datas);
         Scanner scanner = new Scanner(input);
+
+        //eliminating the first 2 rows cause useless
         scanner.nextLine();
         scanner.nextLine();
         ArrayList<String> righe = new ArrayList<>();
@@ -134,8 +140,12 @@ public class DataShowActivity extends AppCompatActivity {
             righe.add(scanner.nextLine());
         }
         int l = 0, r = righe.size() - 1;
+
+        //if going to pokemon trainer get Squirtle
         if (charName.equals("Pokemon Trainer"))
             return righe.get(73).split(";");
+
+        //else do binary search
         while (l <= r) {
             int m = (l + r) / 2;
             int res = charName.toLowerCase().compareTo(righe.get(m).substring(0, righe.get(m).indexOf(';')).toLowerCase());

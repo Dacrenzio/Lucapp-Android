@@ -36,6 +36,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         public TextView textView;
         public MyViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
+
+            //R.id.ImageView is the image of the Card, textView use your imagination :)
             imageView = itemView.findViewById(R.id.ImageView);
             textView = itemView.findViewById(R.id.TextView);
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +77,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
     public Filter getFilter() {
         return myFilter;
     }
+    //this one return the adapter with the filtered list of items and then reconstruct the recyclerView
 
     private Filter myFilter = new Filter() {
         @Override

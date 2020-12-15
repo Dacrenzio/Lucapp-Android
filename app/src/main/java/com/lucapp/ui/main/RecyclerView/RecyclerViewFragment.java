@@ -29,6 +29,7 @@ public class RecyclerViewFragment extends Fragment {
 
         itemList = new ArrayList<>();
 
+        //populate the itemList (maybe can be made auto but the ID mess me up)
         {
             itemList.add(new CardView(R.drawable.banjo_and_kazooie, "Banjo and Kazooie"));
             itemList.add(new CardView(R.drawable.bayonetta, "Bayonetta"));
@@ -113,12 +114,15 @@ public class RecyclerViewFragment extends Fragment {
             itemList.add(new CardView(R.drawable.zelda, "Zelda"));
             itemList.add(new CardView(R.drawable.zero_suit_samus, "Zero Suit Samus"));
         }// metodo statico
+
+        //adapter for the recyclerView
         adapter = new MyAdapter(itemList);
         buildRecyclerView(root);
 
         adapter.setOnItemClickListener((new MyAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
+                //do the click method of the selected card
                 itemList.get(position).click(root.getContext());
             }
         }));
@@ -128,6 +132,8 @@ public class RecyclerViewFragment extends Fragment {
     private void buildRecyclerView(View root) {
         recyclerView = root.findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);
+
+        //set the row of 3 elements each
         layoutManager = new GridLayoutManager(root.getContext(), 3, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

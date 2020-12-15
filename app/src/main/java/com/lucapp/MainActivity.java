@@ -35,8 +35,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav_header);
 
+
+        //adding the toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //setting up the navigation menu
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        //if the navigation menu has never been opened then return to the main fragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecyclerViewFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_charTech);
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
+        //if the navigation menu is open
         if (drawerLayout.isDrawerOpen(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START);
         else if (Objects.requireNonNull(navigationView.getCheckedItem()).getItemId() != R.id.nav_charTech) {
@@ -101,15 +106,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        //create the menu options(can be made inside RecyclerViewFragment but layout has to be changed in order to work well)
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.research_menu, menu);
 
+        //create menu search
         MenuItem searchItem = menu.findItem(R.id.actionSearch);
         final SearchView searchView = (SearchView) searchItem.getActionView();
 
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
         searchView.setIconifiedByDefault(false);
 
+        //when the research menu is closed reset the search value for the query
         searchItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(MenuItem menuItem) {
@@ -123,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        //when text is written in the search bar
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {

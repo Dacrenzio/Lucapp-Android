@@ -31,19 +31,24 @@ public class FragmentMiscInfo extends Fragment {
         View root = inflater.inflate(R.layout.data_fragment_misc_info, container, false);
         placeData(root);
 
-        //aggiungo dello spazio extra in fondo per non far sovrapporre la FAB alla table
+        //adding more margin if the FABs are visible
         if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(60 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
 
+            //if the pressure note is visible
             if(root.findViewById(R.id.pressure_notes).getVisibility() == View.VISIBLE){
                 params.setMargins(dpl, 0, dpl, dp);
                 root.findViewById(R.id.pressure_notes).setLayoutParams(params);
+
             } else if(root.findViewById(R.id.shield_pressure_options).getVisibility() == View.VISIBLE){
+                //if the notes are invisible but the pressure options are not
                 params.setMargins(dpl, 0, dpl, dp);
                 root.findViewById(R.id.shield_pressure_options).setLayoutParams(params);
+
             } else{
+                //if only the table is visible add margin to that
                 int dpt =  Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
                 params.setMargins(dpl, dpt, dpl, dp);
                 root.findViewById(R.id.shield_pressure_table).setLayoutParams(params);
@@ -56,11 +61,14 @@ public class FragmentMiscInfo extends Fragment {
     }
 
     private void placeData(View root) {
-        TableRow[] rows = {root.findViewById(R.id.uAirOOSRow), root.findViewById(R.id.zairUAirRow), root.findViewById(R.id.dashAttackRow)};
+        TableRow[] rows = {root.findViewById(R.id.uAirOOSRow),
+                root.findViewById(R.id.zairUAirRow),
+                root.findViewById(R.id.dashAttackRow)};
+
         TableRow newRow;
         TextView text;
         TableLayout table;
-        int i = 1;
+        int i = 1;//starting point of misc Info datas
         for (TableRow nRow : rows) {
             text = getTextView(nRow, 1f);
             text.setText(DataShowActivity.charData[i]);
@@ -75,13 +83,19 @@ public class FragmentMiscInfo extends Fragment {
                     text.setBackgroundColor(Color.parseColor("#DAB851"));
             }
             nRow.addView(text);
-            if (!DataShowActivity.charData[i].equals("No") && i == 3) {//if it can be hit, show the kill%
+            if (!DataShowActivity.charData[i].equals("No") && i == 3) {
+                //if it can be hit by dash attack, show the kill%
+
                 table = root.findViewById(R.id.dashAttack);
                 newRow = getTableRow(table, "#FFF6A6");
                 text = getTextView(newRow, 3f);
                 text.setText("Kill percentage: ");
                 text.setGravity(Gravity.LEFT);
+
+                //calculating the dense pixels for each phone
                 int dpl = Math.round(9 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+
+                //getting the kill%
                 text.setPadding(dpl, 3, 3, 3);
                 newRow.addView(text);
                 text = getTextView(newRow, 1f);
@@ -118,7 +132,7 @@ public class FragmentMiscInfo extends Fragment {
         }
 
         //adding shield pressure options
-        i = 110;
+        i = 110;//starting point of shield pressure datas
         if(!DataShowActivity.charData[i++].equals("Yes")){
             table = root.findViewById(R.id.shield_pressure_options);
             table.setVisibility(View.VISIBLE);
@@ -150,7 +164,7 @@ public class FragmentMiscInfo extends Fragment {
                     newRow.addView(text);
                     text = getTextView(newRow, 1f);
                     text.setText(DataShowActivity.charData[i]);
-                    if(i == 114){
+                    if(i == 114){//coloring the texts
                         if(DataShowActivity.charData[i].equals("Yes")){
                             text.setBackgroundColor(Color.parseColor("#6CF324"));
                         } else{

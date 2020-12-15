@@ -57,6 +57,7 @@ public class ComboNavMenuPrincipal extends Fragment {
         scanner.nextLine();
         scanner.nextLine();
 
+        //scanning the datas needed for each category
         for (int i = 0; i < 12; i++) {
             datasRowLow[i] = scanner.nextLine();
         }

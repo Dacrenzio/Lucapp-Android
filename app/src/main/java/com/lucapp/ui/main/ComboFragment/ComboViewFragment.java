@@ -73,7 +73,7 @@ public class ComboViewFragment extends Fragment {
                 c++;
                 continue;
             }
-            //Passo 1: creare Table di base
+            //step 1: creating base table
             newTableRoot = new TableLayout(root.getContext());
             TableLayout.LayoutParams params = new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT);
             if (first) {
@@ -85,7 +85,7 @@ public class ComboViewFragment extends Fragment {
             newTableRoot.setLayoutParams(params);
             newTableRoot.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
-            //passo 2: creare una row con su scritto "n% Combo"
+            //step 2: create a new row and add text "n% Combo"
             newRow = getTableRow(newTableRoot, "#5efcff", 12);
             newText = getTextView(newRow, 1f);
             newText.setGravity(Gravity.LEFT);
@@ -94,7 +94,7 @@ public class ComboViewFragment extends Fragment {
             newRow.addView(newText);
             newTableRoot.addView(newRow);
 
-            //passo 3 creare una row con su scritto la combo starter
+            //step 3: adding a new row and add the combo starter
             newRow = getTableRow(newTableRoot, "#38491A", 8);
             newText = getTextView(newRow, 1f);
             newText.setText(datas[0]);
@@ -102,15 +102,17 @@ public class ComboViewFragment extends Fragment {
             newRow.addView(newText);
             newTableRoot.addView(newRow);
 
-            //passo 4.0: creata table che ospita la row che ospita 2 table
+            //step 4.0: create a table that has a row that has 2 tables
             TableLayout newTable = getTable(newTableRoot, 0);
-            //passo 4.1: creare row che ospita 2 table
+            //step 4.1: create the row that has 2 tables
             newRow = getTableRow(newTable, "#38491A", 0);
             newRow.setBackgroundColor(Color.TRANSPARENT);
-            //passo 4.2: creare le 2 table. table Combo
+            //step 4.2: create 2 tables. table Combo
             TableLayout tableIntern = getTable(newRow, 0);
             tableIntern.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 3f));
+
             for (int i = 1; i < 7; i++) {
+                //adding all the combo execution rows
                 if (datas[i].equals("")) {
                     break;
                 }
@@ -128,7 +130,7 @@ public class ComboViewFragment extends Fragment {
             }
             newRow.addView(tableIntern);
 
-            //passo 4.3: creare table Damage
+            //step 4.3: creating table where write total Damage
             tableIntern = getTable(newRow, 8);
             tableIntern.setBackgroundColor(Color.parseColor("#FFF6A6"));
             TableRow damageRow = getTableRow(tableIntern, "#FFF6A6", 0);
@@ -141,12 +143,13 @@ public class ComboViewFragment extends Fragment {
             newTable.addView(newRow);
             newTableRoot.addView(newTable);
 
-            //passo 5.0 creare table per videoView e note
+            //step 5.0: create a table for videoView & notes
             newTable = getTable(newTableRoot, 0);
-            //passo 5.1 creare la row per il videoView
+
+            //step 5.1: create the row for the videoView
             newRow = getTableRow(newTable, "#FFF6A6", 4);
 
-            //passo 5.2 creare Youtube Player View
+            //step 5.2: create the YoutubePlayerView
             YouTubePlayerView videoView = new YouTubePlayerView(newRow.getContext());
             videoView.setEnableAutomaticInitialization(false);
             videoView.initialize(new AbstractYouTubePlayerListener() {
@@ -163,14 +166,15 @@ public class ComboViewFragment extends Fragment {
             newTable.addView(newRow);
 
             if (!datas[8].equals("")) {
-                //passo 5.3 creare la row per le Note
+                //step 5.3: create the row for the Note text
                 newRow = getTableRow(newTable, "#38491A", 8);
                 newText = getTextView(newRow, 1f);
                 newText.setText("Note:");
                 newText.setTextColor(Color.parseColor("#FFFFFF"));
                 newRow.addView(newText);
                 newTable.addView(newRow);
-                //passo 5.4 creare la row per le Note data
+
+                //step 5.4: create the row for the Note data
                 newRow = getTableRow(newTable, "#FFF6A6", 8);
                 newText = getTextView(newRow, 1f);
                 newText.setText(datas[8]);
@@ -183,6 +187,7 @@ public class ComboViewFragment extends Fragment {
         }
     }
 
+    //this method create a tableView
     private TableLayout getTable(View page, int paddingDP) {
         TableLayout newTable = new TableLayout(page.getContext());
         newTable.setPadding(getDP(paddingDP, page), getDP(paddingDP, page), getDP(paddingDP, page), getDP(paddingDP, page));
@@ -190,6 +195,7 @@ public class ComboViewFragment extends Fragment {
         return newTable;
     }
 
+    //this method create a row with a set padding and color
     private TableRow getTableRow(TableLayout table, String color, int dp) {
         TableRow newRow = new TableRow(table.getContext());
         newRow.setPadding(getDP(dp, table), getDP(dp, table), getDP(dp, table), getDP(dp, table));
@@ -198,6 +204,7 @@ public class ComboViewFragment extends Fragment {
         return newRow;
     }
 
+    //this method create a textView with a weight w
     private TextView getTextView(TableRow row, float w) {
         TextView text = new TextView(row.getContext());
         text.setTypeface(Typeface.DEFAULT_BOLD);
@@ -206,6 +213,7 @@ public class ComboViewFragment extends Fragment {
         return text;
     }
 
+    //this method calculate the dense pixel in pixel for each phone
     private int getDP(int dp, View root) {
         return Math.round(dp * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
     }
