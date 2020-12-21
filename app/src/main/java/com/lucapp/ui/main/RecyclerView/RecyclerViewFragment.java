@@ -97,6 +97,7 @@ public class RecyclerViewFragment extends Fragment {
             itemList.add(new CardView(R.drawable.roy, "Roy"));
             itemList.add(new CardView(R.drawable.ryu, "Ryu"));
             itemList.add(new CardView(R.drawable.samus, "Samus"));
+            itemList.add(new CardView(R.drawable.sephiroth, "Sephiroth"));
             itemList.add(new CardView(R.drawable.sheik, "Sheik"));
             itemList.add(new CardView(R.drawable.shulk, "Shulk"));
             itemList.add(new CardView(R.drawable.simon, "Simon"));
