@@ -1,5 +1,8 @@
 package com.lucapp.ui.main.RecyclerView;
 
+//this is a teporary fragment, for the final version I want a button for each table in the app that when pressed adds the table to the
+//data_fragment_important_infos but atm I don't have time
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
