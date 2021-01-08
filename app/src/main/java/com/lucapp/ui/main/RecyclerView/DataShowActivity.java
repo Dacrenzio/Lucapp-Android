@@ -14,7 +14,6 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.lucapp.CardView;
 import com.lucapp.R;
-import com.lucapp.ui.main.RecyclerView.SectionsPagerAdapter;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -45,12 +44,15 @@ public class DataShowActivity extends AppCompatActivity {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setText("Misc Information");
+                            tab.setText("Important");
                             break;
                         case 1:
-                            tab.setText("Tech chase");
+                            tab.setText("Misc");
                             break;
                         case 2:
+                            tab.setText("Tech chase");
+                            break;
+                        case 3:
                             tab.setText("Kill Confirm");
                     }
                 }).attach();

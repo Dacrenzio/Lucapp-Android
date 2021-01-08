@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.lucapp.R;
 
-public class FragmentKillConfirm extends Fragment {
+public class FragmentImportantInfo extends Fragment {
     public static final String ARG_SECTION_NUMBER = "section_number";
 
     @Override
@@ -25,7 +25,7 @@ public class FragmentKillConfirm extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.data_fragment_kill_confirm, container, false);
+        View root = inflater.inflate(R.layout.data_fragment_important_infos, container, false);
         placeData(root);
 
         //adding more bottom margin when the FAB is visible
@@ -34,18 +34,16 @@ public class FragmentKillConfirm extends Fragment {
             int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             params.setMargins(dpl, 0, dpl, dp);
-            root.findViewById(R.id.tablebairTobairKill).setLayoutParams(params);
+            root.findViewById(R.id.tumblePerctableIMP).setLayoutParams(params);
         }
 
         return root;
     }
 
     private void placeData(View root) {
-        //array with the table I need to add 4 elements (4 numbers with the kill %)
-        TableLayout[] tables = {root.findViewById(R.id.tableupthrowkill),
-                root.findViewById(R.id.tableupsmashkill),
-                root.findViewById(R.id.tableDairLoopKill),
-                root.findViewById(R.id.tablebairTobairKill)};
+        TableLayout[] tables = {root.findViewById(R.id.tableupthrowkillIMP),
+                root.findViewById(R.id.tableDairLoopKillIMP),
+        };
 
         int i = 71; //starting point of the datas for the kill confirm
         for (TableLayout table : tables) {//for each table
@@ -65,7 +63,7 @@ public class FragmentKillConfirm extends Fragment {
 
             //the dair loop is an exception of the rule
             if (i == 83) {
-                TableLayout t = root.findViewById(R.id.tableDairLoopSide);
+                TableLayout t = root.findViewById(R.id.tableDairLoopSideIMP);
                 row = new TableRow(t.getContext());
                 row.setBackgroundColor(Color.parseColor("#FFF6A6"));
                 TextView text = getTextView(row, 1);
@@ -81,17 +79,33 @@ public class FragmentKillConfirm extends Fragment {
 
                 //if the dair loop has a note populate the note row and make it visible
                 if (!DataShowActivity.charData[i].equals("")) {
-                    row = new TableRow(root.findViewById(R.id.rowDairLoopNote).getContext());
+                    row = new TableRow(root.findViewById(R.id.rowDairLoopNoteIMP).getContext());
                     row.setBackgroundColor(Color.parseColor("#FFF6A6"));
                     text = getTextView(row, 1);
                     text.setText(DataShowActivity.charData[i]);
                     row.addView(text);
-                    t = root.findViewById(R.id.tableDairLoopNote);
+                    t = root.findViewById(R.id.tableDairLoopNoteIMP);
                     t.setVisibility(View.VISIBLE);
                     t.addView(row);
                 }
                 i++;
             }
+            i +=4;
+        }
+
+        TableRow[] rows = {root.findViewById(R.id.sweetZairIMP),
+                root.findViewById(R.id.sourfairIMP),
+        };
+
+        i = 27; //starts of Tech chase datas;
+        for (TableRow row : rows) {
+            //tech chase data placement
+            for (int j = 0; j < 4; j++) {
+                TextView text = getTextView(row, 1);
+                text.setText(DataShowActivity.charData[i++]);
+                row.addView(text);
+            }
+            i += 4;
         }
     }
 
