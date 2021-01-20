@@ -1,7 +1,8 @@
 package com.lucapp.ui.main.RecyclerView;
 
-//this is a teporary fragment, for the final version I want a button for each table in the app that when pressed adds the table to the
-//data_fragment_important_infos but atm I don't have time
+/*TODO: adding a button on the corner of tables to implement the final version
+this is a teporary fragment, for the final version I want a button for each table in the app that when pressed adds the table to the
+data_fragment_important_infos but atm I don't have time*/
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -57,7 +58,7 @@ public class FragmentImportantInfo extends Fragment {
 
             //add the 4 datas in the row
             for (int j = 0; j < 4; j++) {
-                TextView text = getTextView(row, 1);
+                TextView text = getTextView(row);
                 text.setText(DataShowActivity.charData[i++]);
                 row.addView(text);
             }
@@ -69,11 +70,11 @@ public class FragmentImportantInfo extends Fragment {
                 TableLayout t = root.findViewById(R.id.tableDairLoopSideIMP);
                 row = new TableRow(t.getContext());
                 row.setBackgroundColor(Color.parseColor("#FFF6A6"));
-                TextView text = getTextView(row, 1);
+                TextView text = getTextView(row);
                 text.setText(DataShowActivity.charData[i++]);
                 //added the front text(yes, no ,but)
                 row.addView(text);
-                text = getTextView(row, 1);
+                text = getTextView(row);
 
                 //added the back text (yes, no, but)
                 text.setText(DataShowActivity.charData[i++]);
@@ -84,7 +85,7 @@ public class FragmentImportantInfo extends Fragment {
                 if (!DataShowActivity.charData[i].equals("")) {
                     row = new TableRow(root.findViewById(R.id.rowDairLoopNoteIMP).getContext());
                     row.setBackgroundColor(Color.parseColor("#FFF6A6"));
-                    text = getTextView(row, 1);
+                    text = getTextView(row);
                     text.setText(DataShowActivity.charData[i]);
                     row.addView(text);
                     t = root.findViewById(R.id.tableDairLoopNoteIMP);
@@ -104,7 +105,7 @@ public class FragmentImportantInfo extends Fragment {
         for (TableRow row : rows) {
             //tech chase data placement
             for (int j = 0; j < 4; j++) {
-                TextView text = getTextView(row, 1);
+                TextView text = getTextView(row);
                 text.setText(DataShowActivity.charData[i++]);
                 row.addView(text);
             }
@@ -112,12 +113,12 @@ public class FragmentImportantInfo extends Fragment {
         }
     }
 
-    private TextView getTextView(TableRow row, float w) {
-        //creates a textView with a weight w
+    private TextView getTextView(TableRow row) {
+        //creates a textView with weight 1
         TextView text = new TextView(row.getContext());
         TableRow.LayoutParams params = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER_VERTICAL;
-        params.weight = w;
+        params.weight = 1;
         text.setLayoutParams(params);
         text.setGravity(Gravity.CENTER);
         return text;

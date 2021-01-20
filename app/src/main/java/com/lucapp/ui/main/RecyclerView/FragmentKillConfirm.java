@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 
 import com.lucapp.R;
 
+//TODO: adding the dtilt fsmash/f-air datas
+
 public class FragmentKillConfirm extends Fragment {
     public static final String ARG_SECTION_NUMBER = "section_number";
 
