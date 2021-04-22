@@ -145,7 +145,7 @@ public class DataShowActivity extends AppCompatActivity {
 
         //if going to pokemon trainer get Squirtle
         if (charName.equals("Pokemon Trainer"))
-            return righe.get(74).split(";");
+            return righe.get(76).split(";");
 
         //else do binary search
         while (l <= r) {
