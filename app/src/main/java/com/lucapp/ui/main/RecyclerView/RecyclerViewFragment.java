@@ -59,6 +59,7 @@ public class RecyclerViewFragment extends Fragment {
             itemList.add(new CardView(R.drawable.isabelle, "Isabelle"));
             itemList.add(new CardView(R.drawable.jigglypuff, "Jigglypuff"));
             itemList.add(new CardView(R.drawable.joker, "Joker"));
+            itemList.add(new CardView(R.drawable.kazuya, "Kazuya"));
             itemList.add(new CardView(R.drawable.ken, "Ken"));
             itemList.add(new CardView(R.drawable.king_dedede, "King Dedede"));
             itemList.add(new CardView(R.drawable.king_k_rool, "King K. Rool"));
@@ -79,7 +80,6 @@ public class RecyclerViewFragment extends Fragment {
             itemList.add(new CardView(R.drawable.mii_swordfighter, "Mii Swordfighter"));
             itemList.add(new CardView(R.drawable.minmin, "Minmin"));
             itemList.add(new CardView(R.drawable.mr_game_and_watch, "Mr Game & Watch"));
-            itemList.add(new CardView(R.drawable.mythra, "Mythra"));
             itemList.add(new CardView(R.drawable.ness, "Ness"));
             itemList.add(new CardView(R.drawable.olimar, "Olimar"));
             itemList.add(new CardView(R.drawable.pac_man, "Pac Man"));
@@ -90,7 +90,7 @@ public class RecyclerViewFragment extends Fragment {
             itemList.add(new CardView(R.drawable.piranha_plant, "Piranha Plant"));
             itemList.add(new CardView(R.drawable.pit, "Pit"));
             itemList.add(new CardView(R.drawable.pokemon_trainer, "Pokemon Trainer"));
-            itemList.add(new CardView(R.drawable.pyra, "Pyra"));
+            itemList.add(new CardView(R.drawable.pyra, "Pyra/Mythra"));
             itemList.add(new CardView(R.drawable.richter, "Richter"));
             itemList.add(new CardView(R.drawable.ridley, "Ridley"));
             itemList.add(new CardView(R.drawable.rob, "R.O.B."));

@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="8dp">
 
                     <TextView
@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="8dp">
 
                     <TextView
@@ -136,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="12dp">
 
                     <TextView
@@ -150,7 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#75FFC4"
+                    android:background="@color/oddRow"
                     android:padding="12dp">
 
                     <TextView
@@ -164,7 +164,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="12dp">
 
                     <TextView
@@ -178,7 +178,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#75FFC4"
+                    android:background="@color/oddRow"
                     android:padding="12dp">
 
                     <TextView
@@ -192,7 +192,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="12dp">
 
                     <TextView
@@ -208,7 +208,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@android:color/background_light"
                 android:padding="1dp">
 
@@ -216,7 +216,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -233,7 +233,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="12dp">
 
                     <TextView
@@ -247,7 +247,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#75FFC4"
+                    android:background="@color/oddRow"
                     android:padding="12dp">
 
                     <TextView
@@ -261,7 +261,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="12dp">
 
                     <TextView
@@ -276,7 +276,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@android:color/background_light"
                 android:padding="1dp">
 
@@ -284,7 +284,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -307,7 +307,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="8dp">
 
                     <TextView
@@ -348,7 +348,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -374,7 +374,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -392,7 +392,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -418,7 +418,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -436,7 +436,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -462,7 +462,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -480,7 +480,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -506,7 +506,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -524,7 +524,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -550,7 +550,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -562,7 +562,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@android:color/background_light"
                 android:padding="1dp">
 
@@ -570,7 +570,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -593,7 +593,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="8dp">
 
                     <TextView
@@ -634,7 +634,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -660,7 +660,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -678,7 +678,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -704,7 +704,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -722,7 +722,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -748,7 +748,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -766,7 +766,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -792,7 +792,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>
@@ -810,7 +810,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="12dp">
 
                     <TextView
@@ -839,7 +839,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#FFF6A6"
+                    android:background="@color/evenRow"
                     android:padding="8dp">
 
                 </TableRow>

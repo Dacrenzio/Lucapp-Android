@@ -32,7 +32,7 @@ public class FragmentMiscInfo extends Fragment {
         placeData(root);
 
         //adding more margin if the FABs are visible
-        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
+        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard") || DataShowActivity.charData[0].equals("Pyra")|| DataShowActivity.charData[0].equals("Mythra")) {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(60 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));

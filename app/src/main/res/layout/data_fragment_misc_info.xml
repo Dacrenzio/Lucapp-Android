@@ -34,7 +34,7 @@
                     android:id="@+id/uAirOOSRow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -59,7 +59,7 @@
                     android:id="@+id/dashAttackRow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -84,7 +84,7 @@
                     android:id="@+id/zairUAirRow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -108,7 +108,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -134,7 +134,7 @@
                     android:id="@+id/shield_pressure"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5efcff"
+                    android:background="@color/tableName"
                     android:padding="12dp">
 
                     <TextView
@@ -174,7 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#38491A"
+                    android:background="@color/noteColor"
                     android:padding="6dp">
                     <TextView
                         android:layout_weight="1"

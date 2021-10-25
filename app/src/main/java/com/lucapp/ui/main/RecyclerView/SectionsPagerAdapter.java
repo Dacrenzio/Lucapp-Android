@@ -24,14 +24,10 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
         Fragment fragment;
         switch (position) {
             case 0:
-                fragment = new FragmentImportantInfo();
-                args.putInt(FragmentImportantInfo.ARG_SECTION_NUMBER, position + 1);
-                break;
-            case 1:
                 fragment = new FragmentMiscInfo();
                 args.putInt(FragmentMiscInfo.ARG_SECTION_NUMBER, position + 1);
                 break;
-            case 2:
+            case 1:
                 fragment = new FragmentTechChase();
                 args.putInt(FragmentTechChase.ARG_SECTION_NUMBER, position + 1);
                 break;
@@ -46,6 +42,6 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }
