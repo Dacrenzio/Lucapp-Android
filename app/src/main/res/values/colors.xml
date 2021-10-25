@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#000000</color>
+    <color name="tableName">#5efcff</color>
+    <color name="noteColor">#38491A</color>
+    <color name="evenRow">#FFF6A6</color>
+    <color name="oddRow">#75FFC4</color>
 </resources>

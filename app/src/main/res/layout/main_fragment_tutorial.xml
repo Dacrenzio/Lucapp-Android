@@ -54,7 +54,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="Mastering PSI-Magnet"
@@ -84,7 +84,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="Magnet Movement"
@@ -145,7 +145,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="PK-Thunder Edgeguard"
@@ -174,7 +174,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="Defensive PK-Thunder options"
@@ -203,7 +203,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="PK-Thunder Bonking"
@@ -263,7 +263,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="D-air Loop"
@@ -325,7 +325,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="DJCZ video guide"
@@ -354,7 +354,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#5efcff"
+                        android:background="@color/tableName"
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="DJCZ movement"

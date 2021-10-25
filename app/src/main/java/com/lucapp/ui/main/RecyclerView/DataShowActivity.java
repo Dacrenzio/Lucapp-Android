@@ -44,26 +44,45 @@ public class DataShowActivity extends AppCompatActivity {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setText("Important");
-                            break;
-                        case 1:
                             tab.setText("Misc");
                             break;
-                        case 2:
+                        case 1:
                             tab.setText("Tech chase");
                             break;
-                        case 3:
+                        case 2:
                             tab.setText("Kill Confirm");
                     }
                 }).attach();
 
 
-        if (messageCardView != null && (messageCardView.equals("Pokemon Trainer") || messageCardView.equals("Squirtle") || messageCardView.equals("Ivysaur") || messageCardView.equals("Charizard"))) {
-            fabManager(intent);
+        if (messageCardView != null && (charData[0].equals("Squirtle") || charData[0].equals("Ivysaur") || charData[0].equals("Charizard"))) {
+            fabManagerPKMN(intent);
+        }
+        if (messageCardView != null && (charData[0].equals("Pyra") || charData[0].equals("Mythra"))) {
+            fabManagerPyraMythra(intent, charData[0]);
         }
     }
 
-    private void fabManager(Intent intent) {
+    private void fabManagerPyraMythra(Intent intent, String charName) {
+        FloatingActionButton fab = findViewById(charName.equals("Pyra") ? R.id.mythraFAB : R.id.pyraFAB);
+        fab.setVisibility(View.VISIBLE);
+        fab.setClickable(true);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(charName.equals("Pyra")){
+                    intent.putExtra(CardView.NomePG, "Mythra");
+                    recreate();
+                }else{
+                    intent.putExtra(CardView.NomePG, "Pyra");
+                    recreate();
+                }
+            }
+        });
+    }
+
+    private void fabManagerPKMN(Intent intent) {
         //turning the first FAB visible and clickable when is one of the pokemon's pokemon Trainer
         FloatingActionButton fab = findViewById(R.id.fab);
         findViewById(R.id.tableFAB).setVisibility(View.VISIBLE);
@@ -145,7 +164,10 @@ public class DataShowActivity extends AppCompatActivity {
 
         //if going to pokemon trainer get Squirtle
         if (charName.equals("Pokemon Trainer"))
-            return righe.get(76).split(";");
+            charName="Squirtle";
+
+        if(charName.equals("Pyra/Mythra"))
+            charName="Pyra";
 
         //else do binary search
         while (l <= r) {

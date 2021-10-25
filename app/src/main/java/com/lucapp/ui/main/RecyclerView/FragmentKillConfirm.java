@@ -31,7 +31,7 @@ public class FragmentKillConfirm extends Fragment {
         placeData(root);
 
         //adding more bottom margin when the FAB is visible
-        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard")) {
+        if (DataShowActivity.charData[0].equals("Squirtle") || DataShowActivity.charData[0].equals("Ivysaur") || DataShowActivity.charData[0].equals("Charizard") || DataShowActivity.charData[0].equals("Pyra")|| DataShowActivity.charData[0].equals("Mythra")) {
             TableLayout.LayoutParams params = new TableLayout.LayoutParams();
             int dpl = Math.round(30 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
             int dp = Math.round(90 * ((float) root.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
@@ -47,10 +47,14 @@ public class FragmentKillConfirm extends Fragment {
         TableLayout[] tables = {root.findViewById(R.id.tableupthrowkill),
                 root.findViewById(R.id.tableupsmashkill),
                 root.findViewById(R.id.tableDairLoopKill),
-                root.findViewById(R.id.tablebairTobairKill)};
+                root.findViewById(R.id.tablebairTobairKill),
+                root.findViewById(R.id.tabledtiltFair),
+                root.findViewById(R.id.tabledtiltFsmash)};
 
         int i = 71; //starting point of the datas for the kill confirm
         for (TableLayout table : tables) {//for each table
+            if(i == 90) //completed the first 3 tambles, now jump to dtilt confirms
+                i = 116;
 
             //create a row
             TableRow row = new TableRow(table.getContext());
