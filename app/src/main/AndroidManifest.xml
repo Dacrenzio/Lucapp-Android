@@ -12,6 +12,7 @@
 
     <activity
             android:name="com.lucapp.ui.main.RecyclerView.DataShowActivity"
+            android:exported="true"
             android:label="@string/title_activity_data_show"
             android:theme="@style/AppTheme.NoActionBarData">
             <intent-filter>
@@ -21,7 +22,8 @@
         </activity>
         <activity
             android:name="com.lucapp.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
