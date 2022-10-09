@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/activity_data_show.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/activity_data_show.xml" value="0.25" />
         <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/activity_nav_header.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/card_view.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/data_fragment_important_infos.xml" value="0.20520833333333333" />
@@ -15,6 +15,7 @@
         <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/main_fragment_recycler_view_card.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/main_fragment_tutorial.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/layout/nav_layout.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Dacre/Documents/Lucapp-Android/app/src/main/res/menu/drawer_menu.xml" value="0.3625" />
       </map>
     </option>
   </component>

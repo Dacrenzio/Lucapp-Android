@@ -1,5 +1,6 @@
 package com.lucapp;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,14 +9,15 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> implements Filterable {
-    private ArrayList<CardView> itemsList;
-    private ArrayList<CardView> fullList;
+    private final ArrayList<CardView> itemsList;
+    private final ArrayList<CardView> fullList;
     private OnItemClickListener listener;
 
     public interface OnItemClickListener{
@@ -40,25 +42,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
             //R.id.ImageView is the image of the Card, textView use your imagination :)
             imageView = itemView.findViewById(R.id.ImageView);
             textView = itemView.findViewById(R.id.TextView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(listener != null){
-                        int position = getAdapterPosition();
-                        if(position!=RecyclerView.NO_POSITION){
-                            listener.onItemClick(position);
-                        }
+            itemView.setOnClickListener(view -> {
+                if(listener != null){
+                    int position = getAdapterPosition();
+                    if(position!=RecyclerView.NO_POSITION){
+                        listener.onItemClick(position);
                     }
                 }
             });
         }
     }
 
+    @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view, parent, false);
-        MyViewHolder mvh = new MyViewHolder(v, listener);
-        return mvh;
+        return new MyViewHolder(v, listener);
     }
 
     @Override
@@ -79,7 +78,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
     }
     //this one return the adapter with the filtered list of items and then reconstruct the recyclerView
 
-    private Filter myFilter = new Filter() {
+    private final Filter myFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence charSequence) {
             List<CardView> filteredList = new ArrayList<>();
@@ -101,6 +100,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
             return results;
         }
 
+        @SuppressLint("NotifyDataSetChanged")
         @Override
         protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
             itemsList.clear();
